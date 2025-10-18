@@ -167,7 +167,7 @@ export default function Home() {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               What Families Are Saying
             </h2>
-            <p className="text-xl text-gray-600">Real stories from the families we've had the honor to serve</p>
+            <p className="text-xl text-gray-600">Real stories from the families we&apos;ve had the honor to serve</p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -180,7 +180,7 @@ export default function Home() {
                     </svg>
                   ))}
                 </div>
-                <p className="text-gray-700 mb-4 italic">"{testimonial.quote}"</p>
+                <p className="text-gray-700 mb-4 italic">&ldquo;{testimonial.quote}&rdquo;</p>
                 <div>
                   <p className="font-semibold text-gray-900">{testimonial.name}</p>
                   <p className="text-sm text-gray-600">{testimonial.relationship}</p>

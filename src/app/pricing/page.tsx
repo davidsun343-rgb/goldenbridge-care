@@ -11,7 +11,7 @@ export default function PricingPage() {
               Transparent Pricing
             </h1>
             <p className="text-xl text-green-100 mb-8 max-w-3xl mx-auto">
-              Quality elderly care shouldn't be a mystery. Our clear, upfront pricing 
+              Quality elderly care shouldn&apos;t be a mystery. Our clear, upfront pricing 
               ensures you know exactly what to expect with no hidden fees.
             </p>
             <div className="inline-flex items-center gap-2 bg-green-500 bg-opacity-30 px-6 py-3 rounded-full">
@@ -48,7 +48,7 @@ export default function PricingPage() {
 
           <div className="mt-12 bg-blue-50 rounded-2xl p-8">
             <div className="text-center mb-6">
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">What's Included in Mental Health Support</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-2">What&apos;s Included in Mental Health Support</h3>
               <p className="text-gray-600">Comprehensive emotional wellness support tailored to your needs</p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -460,7 +460,16 @@ const paymentMethods = [
 ];
 
 // Component definitions
-function MentalHealthCard({ name, price, period, description, features, popular }: any) {
+interface MentalHealthCardProps {
+  name: string;
+  price: string;
+  period: string;
+  description: string;
+  features: string[];
+  popular?: boolean;
+}
+
+function MentalHealthCard({ name, price, period, description, features, popular }: MentalHealthCardProps) {
   return (
     <div className={`relative bg-white rounded-xl border-2 p-6 ${popular ? 'border-blue-500 shadow-lg' : 'border-gray-200'}`}>
       {popular && (
@@ -502,7 +511,17 @@ function MentalHealthCard({ name, price, period, description, features, popular 
   );
 }
 
-function CarePackageCard({ name, price, period, description, features, hours, popular }: any) {
+interface CarePackageCardProps {
+  name: string;
+  price: string;
+  period: string;
+  description: string;
+  features: string[];
+  hours?: string;
+  popular?: boolean;
+}
+
+function CarePackageCard({ name, price, period, description, features, hours, popular }: CarePackageCardProps) {
   return (
     <div className={`relative bg-white rounded-xl border-2 p-6 ${popular ? 'border-green-500 shadow-lg' : 'border-gray-200'}`}>
       {popular && (

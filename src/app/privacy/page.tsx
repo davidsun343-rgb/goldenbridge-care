@@ -9,7 +9,7 @@ export default function PrivacyPage() {
             
             <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Introduction</h2>
             <p>
-              GoldenBridge Care ("we," "our," or "us") is committed to protecting your privacy. 
+              GoldenBridge Care (&ldquo;we,&rdquo; &ldquo;our,&rdquo; or &ldquo;us&rdquo;) is committed to protecting your privacy. 
               This Privacy Policy explains how we collect, use, disclose, and safeguard your 
               information when you use our elderly care services.
             </p>
@@ -47,7 +47,7 @@ export default function PrivacyPage() {
               <li>Healthcare providers involved in your care</li>
               <li>Insurance companies for billing purposes</li>
               <li>Emergency services when necessary</li>
-              <li>Family members you've designated as contacts</li>
+              <li>Family members you&apos;ve designated as contacts</li>
               <li>Legal authorities when required by law</li>
             </ul>
 

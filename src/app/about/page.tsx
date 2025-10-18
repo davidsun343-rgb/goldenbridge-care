@@ -11,7 +11,7 @@ export default function AboutPage() {
               About GoldenBridge Care
             </h1>
             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-              Founded on the principles of compassion, dignity, and respect, we've been 
+              Founded on the principles of compassion, dignity, and respect, we&apos;ve been 
               providing exceptional elderly care services across the GTA for over a decade.
             </p>
           </div>
@@ -129,24 +129,24 @@ export default function AboutPage() {
                 A Legacy of Compassionate Care
               </h2>
               <p className="text-lg text-gray-600 mb-6">
-                What started as a small nursing service has grown into the GTA's most trusted 
+                What started as a small nursing service has grown into the GTA&apos;s most trusted 
                 elderly care provider. Our journey has been guided by one simple principle: 
                 treating every client like family.
               </p>
               <p className="text-lg text-gray-600 mb-6">
-                We've witnessed countless precious moments - from helping clients maintain their 
+                We&apos;ve witnessed countless precious moments - from helping clients maintain their 
                 independence to providing comfort during challenging times. Each story reinforces 
                 our commitment to excellence in care.
               </p>
               <p className="text-lg text-gray-600 mb-8">
-                Today, we're proud to serve hundreds of families across the GTA, but our mission 
+                Today, we&apos;re proud to serve hundreds of families across the GTA, but our mission 
                 remains unchanged: to provide care that honors the dignity and enhances the 
                 quality of life for every senior we serve.
               </p>
               <div className="bg-blue-50 rounded-lg p-6">
                 <p className="text-blue-900 font-medium italic">
-                  "Every person deserves to age with dignity, surrounded by compassion and respect. 
-                  This belief drives everything we do at GoldenBridge Care."
+                  &ldquo;Every person deserves to age with dignity, surrounded by compassion and respect. 
+                  This belief drives everything we do at GoldenBridge Care.&rdquo;
                 </p>
                 <p className="text-blue-700 font-medium mt-2">- Maria Santos, Founder & CEO</p>
               </div>

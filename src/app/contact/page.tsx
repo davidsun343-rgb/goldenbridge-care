@@ -11,7 +11,7 @@ export default function ContactPage() {
               Get in Touch
             </h1>
             <p className="text-xl text-indigo-100 mb-8 max-w-2xl mx-auto">
-              Ready to learn more about our elderly care services? We're here to help you 
+              Ready to learn more about our elderly care services? We&apos;re here to help you 
               find the perfect care solution for your loved one.
             </p>
           </div>
@@ -26,7 +26,7 @@ export default function ContactPage() {
               Request a Free Consultation
             </h2>
             <p className="text-gray-600 mb-8">
-              Fill out the form below and we'll contact you within 24 hours to discuss 
+              Fill out the form below and we&apos;ll contact you within 24 hours to discuss 
               your care needs and create a personalized plan.
             </p>
 

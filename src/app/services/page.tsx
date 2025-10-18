@@ -11,7 +11,7 @@ export default function ServicesPage() {
               Comprehensive Elderly Care Services
             </h1>
             <p className="text-xl md:text-2xl text-indigo-100 mb-8 max-w-3xl mx-auto">
-              Professional, compassionate care tailored to your loved one's unique needs. 
+              Professional, compassionate care tailored to your loved one&apos;s unique needs. 
               Available 24/7 across the Greater Toronto Area.
             </p>
             <Link href="/contact" className="inline-block bg-white text-indigo-700 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
@@ -181,7 +181,7 @@ export default function ServicesPage() {
           </h2>
           <p className="text-xl text-indigo-100 mb-8 max-w-2xl mx-auto">
             Contact us today for a free consultation and personalized care plan 
-            tailored to your loved one's specific needs.
+            tailored to your loved one&apos;s specific needs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact" className="bg-white text-indigo-700 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
