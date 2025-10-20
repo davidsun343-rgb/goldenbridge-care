@@ -84,7 +84,7 @@ export default function ContactPage() {
                   name="phone"
                   required
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
-                  placeholder="(416) 555-0123"
+                  placeholder="(437) 360-9088"
                 />
               </div>
 
@@ -204,11 +204,11 @@ export default function ContactPage() {
                 </div>
               </div>
               <div className="space-y-2">
-                <Link href="tel:+14165559911" className="flex items-center gap-3 text-red-700 hover:text-red-800">
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                <Link href="tel:+14373609088" className="flex items-center gap-3 text-red-700 hover:text-red-800">
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21L8.5 10.5a11.086 11.086 0 00-3 3l1.114 1.726a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.948V20a2 2 0 01-2 2h-1C5.373 22 2 18.627 2 14V5z" />
                   </svg>
-                  <span className="font-semibold">(416) 555-9911</span>
+                  <span className="font-semibold">(437) 360-9088</span>
                 </Link>
               </div>
             </div>
@@ -226,8 +226,8 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="font-medium text-gray-900">Main Office</p>
-                    <Link href="tel:+14165554357" className="text-indigo-600 hover:text-indigo-700">
-                      (416) 555-CARE (4357)
+                    <Link href="tel:+14373609088" className="text-indigo-600 hover:text-indigo-700">
+                      (437) 360-9088
                     </Link>
                     <p className="text-sm text-gray-500">Monday - Friday: 8 AM - 8 PM</p>
                     <p className="text-sm text-gray-500">Saturday - Sunday: 9 AM - 5 PM</p>
@@ -271,8 +271,8 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="font-medium text-gray-900">Mental Health Helpline</p>
-                    <Link href="tel:+14165554357" className="text-green-600 hover:text-green-700 font-medium">
-                      (416) 555-CARE
+                    <Link href="tel:+14373609088" className="text-green-600 hover:text-green-700 font-medium">
+                      (437) 360-9088
                     </Link>
                     <p className="text-sm text-gray-500">Available 24/7 for support calls</p>
                   </div>

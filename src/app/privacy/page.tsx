@@ -72,7 +72,7 @@ export default function PrivacyPage() {
             <p>If you have questions about this Privacy Policy, please contact us:</p>
             <div className="bg-gray-50 p-6 rounded-lg mt-4">
               <p><strong>Email:</strong> privacy@goldenbridgecare.com</p>
-              <p><strong>Phone:</strong> (416) 555-CARE</p>
+              <p><strong>Phone:</strong> (437) 360-9088</p>
               <p><strong>Mail:</strong> 123 Care Street, Toronto, ON M5V 3A8</p>
             </div>
           </div>

@@ -1,48 +1,57 @@
 import Link from "next/link";
+import Logo from "../components/Logo";
 
 export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-indigo-50 via-blue-50 to-white" />
-        <div className="relative max-w-6xl mx-auto px-6 py-20 md:py-28">
+      <section className="relative overflow-hidden min-h-screen flex items-center">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img 
+            src="/images/nursing-care-costs-scaled-1-1024x682.jpg" 
+            alt="Professional elderly care services"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+        </div>
+        <div className="relative z-10 max-w-6xl mx-auto px-6 py-20 md:py-28">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="inline-flex items-center gap-2 bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium mb-6">
-                <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+              <div className="inline-flex items-center gap-2 bg-green-600 bg-opacity-90 text-white px-6 py-3 rounded-full text-sm font-medium mb-6 backdrop-blur-sm">
+                <span className="w-2 h-2 bg-green-300 rounded-full animate-pulse"></span>
                 24/7 Mental Health Support Available
               </div>
-              <h1 className="text-4xl md:text-6xl font-extrabold leading-tight">
-                Compassionate <span className="text-indigo-700">Elderly Care</span> at Home
+              <h1 className="text-4xl md:text-6xl font-extrabold leading-tight text-white drop-shadow-2xl">
+                Compassionate <span className="text-blue-300">Elderly Care</span> at Home
               </h1>
-              <p className="mt-6 text-xl text-gray-700 leading-relaxed">
-                Professional care services including <strong>mental health support</strong>, companionship, 
+              <p className="mt-6 text-xl text-gray-100 leading-relaxed drop-shadow-lg">
+                Professional care services including <strong className="text-white">mental health support</strong>, companionship, 
                 medical assistance, and daily living help. Available 24/7 across the Greater Toronto Area.
               </p>
               <div className="mt-8 flex flex-col sm:flex-row gap-4">
-                <Link href="/contact" className="btn-primary text-center">
+                <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 text-center shadow-2xl backdrop-blur-sm bg-opacity-90">
                   Get Free Consultation
                 </Link>
-                <Link href="tel:+14165554357" className="btn-secondary text-center">
-                  Call (416) 555-CARE
+                <Link href="tel:+14373609088" className="bg-white bg-opacity-90 hover:bg-opacity-100 text-gray-900 px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 text-center shadow-2xl backdrop-blur-sm">
+                  Call (437) 360-9088
                 </Link>
               </div>
-              <div className="mt-8 flex items-center gap-6 text-sm text-gray-600">
-                <div className="flex items-center gap-2">
-                  <svg className="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+              <div className="mt-8 flex items-center gap-6 text-sm text-gray-100">
+                <div className="flex items-center gap-2 bg-black bg-opacity-30 px-3 py-2 rounded-lg backdrop-blur-sm">
+                  <svg className="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                   Licensed & Insured
                 </div>
-                <div className="flex items-center gap-2">
-                  <svg className="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                <div className="flex items-center gap-2 bg-black bg-opacity-30 px-3 py-2 rounded-lg backdrop-blur-sm">
+                  <svg className="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                   Same-Week Start
                 </div>
-                <div className="flex items-center gap-2">
-                  <svg className="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                <div className="flex items-center gap-2 bg-black bg-opacity-30 px-3 py-2 rounded-lg backdrop-blur-sm">
+                  <svg className="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                   15+ Years Experience
