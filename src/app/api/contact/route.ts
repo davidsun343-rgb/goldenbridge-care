@@ -1,7 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+// Initialize Resend only if API key is available
+const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null;
 
 export async function POST(request: NextRequest) {
   try {
@@ -104,7 +105,7 @@ export async function POST(request: NextRequest) {
 
     // Send email using Resend
     let emailResult;
-    if (process.env.RESEND_API_KEY && process.env.RESEND_API_KEY !== 'your_resend_api_key_here') {
+    if (process.env.RESEND_API_KEY && process.env.RESEND_API_KEY !== 'your_resend_api_key_here' && resend) {
       const { data, error } = await resend.emails.send({
         from: 'GoldenBridge Care Contact Form <onboarding@resend.dev>',
         to: ['davidsun343@gmail.com'],
@@ -124,8 +125,8 @@ export async function POST(request: NextRequest) {
     } else {
       // Development mode - log email content instead of sending
       console.log('=== EMAIL PREVIEW (Development Mode) ===');
-      console.log('TO:', 'info@goldenbridgecare.ca');
-      console.log('FROM:', 'GoldenBridge Care Contact Form <noreply@goldenbridgecare.ca>');
+      console.log('TO:', 'davidsun343@gmail.com');
+      console.log('FROM:', 'GoldenBridge Care Contact Form <onboarding@resend.dev>');
       console.log('SUBJECT:', `New Contact Form Submission - ${firstName} ${lastName}`);
       console.log('REPLY TO:', email);
       console.log('FORM DATA:', {
