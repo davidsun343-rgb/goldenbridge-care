@@ -223,7 +223,6 @@ const services: Service[] = [
     title: "Medical Assistance",
     description: "Professional support with healthcare needs and medical appointments.",
     features: [
-      "Medication reminders and management",
       "Medical appointment coordination",
       "Health monitoring and reporting",
       "Communication with doctors"
@@ -278,30 +277,7 @@ const services: Service[] = [
     ],
     link: "#wellness"
   },
-  {
-    icon: "🧠",
-    title: "Memory Care & Dementia Support",
-    description: "Specialized care for individuals with Alzheimer's and dementia.",
-    features: [
-      "Memory stimulation activities",
-      "Cognitive behavioral techniques",
-      "Safe environment monitoring",
-      "Family education and support"
-    ],
-    link: "#memory-care"
-  },
-  {
-    icon: "💊",
-    title: "Medication Management",
-    description: "Professional oversight of medication schedules and compliance.",
-    features: [
-      "Pill organization and dispensing",
-      "Medication reminder systems",
-      "Side effect monitoring",
-      "Pharmacy coordination"
-    ],
-    link: "#medication"
-  },
+
   {
     icon: "🛁",
     title: "Personal Care Services",
@@ -386,18 +362,7 @@ const services: Service[] = [
     ],
     link: "#respite-care"
   },
-  {
-    icon: "🚑",
-    title: "Post-Hospital Care",
-    description: "Specialized transitional care after hospital discharge.",
-    features: [
-      "Recovery monitoring",
-      "Medication compliance",
-      "Appointment coordination",
-      "Rehabilitation support"
-    ],
-    link: "#post-hospital"
-  }
+
 ];
 
 function ServiceCard({ icon, title, description, features, link }: Service) {

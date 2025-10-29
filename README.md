@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# GoldenBridge Care Website
 
-## Getting Started
+A professional website for elderly care services with integrated contact form functionality.
 
-First, run the development server:
+## Setup Instructions
 
+### 1. Install Dependencies
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Configure Email Service (Resend)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Sign up for a free account at [Resend.com](https://resend.com)
+2. Go to your [API Keys page](https://resend.com/api-keys)
+3. Create a new API key
+4. Copy the API key and add it to your `.env.local` file:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```env
+RESEND_API_KEY=re_your_actual_api_key_here
+```
 
-## Learn More
+### 3. Domain Verification (Optional but Recommended)
 
-To learn more about Next.js, take a look at the following resources:
+To send emails from your custom domain (info@goldenbridgecare.ca):
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. In your Resend dashboard, go to Domains
+2. Add your domain: `goldenbridgecare.ca`
+3. Follow the DNS configuration instructions
+4. Once verified, update the "from" address in `/src/app/api/contact/route.ts`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 4. Run the Development Server
+```bash
+npm run dev
+```
 
-## Deploy on Vercel
+## Features
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Contact Form**: Fully functional contact form that sends emails to info@goldenbridgecare.ca
+- **Email Templates**: Professional HTML email templates with all form data
+- **Form Validation**: Client-side and server-side validation
+- **Success/Error Handling**: User-friendly feedback for form submissions
+- **Mobile Responsive**: Works perfectly on all devices
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Contact Form Features
+
+- Collects all necessary information for care consultations
+- Sends formatted emails with:
+  - Contact information
+  - Services of interest
+  - Urgency level
+  - Additional messages
+  - Quick action buttons (Reply via Email, Call Now)
+- Shows success message after submission
+- Handles errors gracefully
+
+## Email Configuration
+
+The contact form emails are sent to: **info@goldenbridgecare.ca**
+
+All form submissions include:
+- Full contact details
+- Selected services
+- Urgency timeframe
+- Additional information
+- Professional formatting for easy reading
+
+## Support
+
+For technical support or questions about the contact form functionality, please check the console logs for any errors and ensure your Resend API key is properly configured.

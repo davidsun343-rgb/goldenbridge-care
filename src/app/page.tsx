@@ -37,7 +37,7 @@ export default function Home() {
                   Call (437) 360-9088
                 </Link>
               </div>
-              <div className="mt-8 flex items-center gap-6 text-sm text-gray-100">
+              <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 text-sm text-gray-100">
                 <div className="flex items-center gap-2 bg-black bg-opacity-30 px-3 py-2 rounded-lg backdrop-blur-sm">
                   <svg className="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
@@ -49,6 +49,18 @@ export default function Home() {
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                   Same-Week Start
+                </div>
+                <div className="flex items-center gap-2 bg-black bg-opacity-30 px-3 py-2 rounded-lg backdrop-blur-sm">
+                  <svg className="w-5 h-5 text-red-400" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10 2C5.03 2 1 6.03 1 11c0 1.17.23 2.29.64 3.32L1 18l3.68-.64C5.71 17.77 6.83 18 8 18h2c4.97 0 9-4.03 9-9S14.97 2 10 2zm0 2c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm4 12h-8v-1.5c0-1.33 2.67-2 4-2s4 .67 4 2V16z"/>
+                  </svg>
+                  All CPR Certified
+                </div>
+                <div className="flex items-center gap-2 bg-black bg-opacity-30 px-3 py-2 rounded-lg backdrop-blur-sm">
+                  <svg className="w-5 h-5 text-blue-400" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"/>
+                  </svg>
+                  PSW & Non-PSW Team
                 </div>
                 <div className="flex items-center gap-2 bg-black bg-opacity-30 px-3 py-2 rounded-lg backdrop-blur-sm">
                   <svg className="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
@@ -99,6 +111,52 @@ export default function Home() {
               <Link href="/services#mental-health" className="mt-6 w-full bg-indigo-700 text-white py-3 px-6 rounded-lg font-semibold hover:bg-indigo-800 transition-colors text-center block">
                 Learn More About Mental Health Services
               </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Team Qualifications Highlight */}
+      <section className="py-12 bg-gradient-to-r from-blue-600 to-indigo-700">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Fully Qualified & Certified Care Team
+            </h2>
+            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+              Every member of our team is professionally trained and certified to provide the highest quality care
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-white bg-opacity-10 rounded-xl p-6 backdrop-blur-sm">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center">
+                  <svg className="w-6 h-6 text-red-600" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10 2C5.03 2 1 6.03 1 11c0 1.17.23 2.29.64 3.32L1 18l3.68-.64C5.71 17.77 6.83 18 8 18h2c4.97 0 9-4.03 9-9S14.97 2 10 2zm0 2c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm4 12h-8v-1.5c0-1.33 2.67-2 4-2s4 .67 4 2V16z"/>
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-white">100% CPR Certified Staff</h3>
+              </div>
+              <p className="text-blue-100">
+                Every single team member is CPR certified and trained in emergency response procedures. 
+                Your loved ones are always in safe, capable hands.
+              </p>
+            </div>
+            
+            <div className="bg-white bg-opacity-10 rounded-xl p-6 backdrop-blur-sm">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                  <svg className="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"/>
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-white">PSW & Non-PSW Professionals</h3>
+              </div>
+              <p className="text-blue-100">
+                Our comprehensive team includes certified Personal Support Workers (PSWs) and skilled 
+                non-PSW caregivers, ensuring we can meet every aspect of your care needs.
+              </p>
             </div>
           </div>
         </div>
@@ -155,7 +213,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {whyChooseUs.map((reason, index) => (
               <div key={index} className="text-center">
                 <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -281,7 +339,6 @@ const featuredServices = [
     title: "Medical Assistance",
     description: "Professional support with healthcare needs and medical coordination.",
     features: [
-      "Medication management",
       "Medical appointment coordination",
       "Health monitoring",
       "Communication with healthcare providers"
@@ -324,18 +381,7 @@ const featuredServices = [
     ],
     link: "/services#emergency"
   },
-  {
-    icon: "🧠",
-    title: "Memory Care & Dementia Support",
-    description: "Specialized care for individuals with Alzheimer's and dementia.",
-    features: [
-      "Memory stimulation activities",
-      "Cognitive behavioral techniques",
-      "Safe environment monitoring",
-      "Family education and support"
-    ],
-    link: "/services#memory-care"
-  },
+
   {
     icon: "🌙",
     title: "Overnight Care",
@@ -367,6 +413,16 @@ const whyChooseUs = [
     icon: "🏆",
     title: "15+ Years Experience",
     description: "Over a decade of providing exceptional elderly care services across the GTA."
+  },
+  {
+    icon: "🩺",
+    title: "All CPR Certified",
+    description: "Every team member is CPR certified and trained in emergency response procedures."
+  },
+  {
+    icon: "👥",
+    title: "PSW & Non-PSW Team",
+    description: "Comprehensive team of certified Personal Support Workers and skilled non-PSW caregivers to serve every need."
   },
   {
     icon: "💝",

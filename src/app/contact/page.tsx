@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ContactForm from "../../components/ContactForm";
 
 export default function ContactPage() {
   return (
@@ -21,172 +22,7 @@ export default function ContactPage() {
       <div className="max-w-6xl mx-auto px-6 py-16">
         <div className="grid lg:grid-cols-2 gap-16">
           {/* Contact Form */}
-          <div className="bg-white rounded-2xl shadow-sm border p-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
-              Request a Free Consultation
-            </h2>
-            <p className="text-gray-600 mb-8">
-              Fill out the form below and we&apos;ll contact you within 24 hours to discuss 
-              your care needs and create a personalized plan.
-            </p>
-
-            <form className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-4">
-                <div>
-                  <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-2">
-                    First Name *
-                  </label>
-                  <input
-                    type="text"
-                    id="firstName"
-                    name="firstName"
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
-                    placeholder="Enter your first name"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-2">
-                    Last Name *
-                  </label>
-                  <input
-                    type="text"
-                    id="lastName"
-                    name="lastName"
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
-                    placeholder="Enter your last name"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                  Email Address *
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
-                  placeholder="your.email@example.com"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                  Phone Number *
-                </label>
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
-                  placeholder="(437) 360-9088"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="relationship" className="block text-sm font-medium text-gray-700 mb-2">
-                  Relationship to Care Recipient
-                </label>
-                <select
-                  id="relationship"
-                  name="relationship"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
-                >
-                  <option value="">Select relationship</option>
-                  <option value="adult-child">Adult Child</option>
-                  <option value="spouse">Spouse/Partner</option>
-                  <option value="sibling">Sibling</option>
-                  <option value="other-family">Other Family Member</option>
-                  <option value="friend">Friend</option>
-                  <option value="self">Self</option>
-                </select>
-              </div>
-
-              <div>
-                <label htmlFor="services" className="block text-sm font-medium text-gray-700 mb-2">
-                  Services Interested In *
-                </label>
-                <div className="space-y-2">
-                  {[
-                    "Mental Health Support & Calling",
-                    "Companionship Services",
-                    "Medical Assistance",
-                    "Daily Living Support",
-                    "Transportation Services",
-                    "Emergency Response",
-                    "Not Sure - Need Consultation"
-                  ].map((service) => (
-                    <label key={service} className="flex items-center">
-                      <input
-                        type="checkbox"
-                        name="services"
-                        value={service}
-                        className="rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-                      />
-                      <span className="ml-2 text-sm text-gray-700">{service}</span>
-                    </label>
-                  ))}
-                </div>
-              </div>
-
-              <div>
-                <label htmlFor="urgency" className="block text-sm font-medium text-gray-700 mb-2">
-                  How soon do you need care?
-                </label>
-                <select
-                  id="urgency"
-                  name="urgency"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
-                >
-                  <option value="">Select timeframe</option>
-                  <option value="immediate">Immediately (within 24-48 hours)</option>
-                  <option value="this-week">This week</option>
-                  <option value="next-week">Next week</option>
-                  <option value="this-month">Within this month</option>
-                  <option value="planning">Just planning ahead</option>
-                </select>
-              </div>
-
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                  Additional Information
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows={4}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
-                  placeholder="Please share any specific care needs, medical conditions, or questions you have..."
-                ></textarea>
-              </div>
-
-              <div className="flex items-start">
-                <input
-                  type="checkbox"
-                  id="consent"
-                  name="consent"
-                  required
-                  className="rounded border-gray-300 text-indigo-600 focus:ring-indigo-500 mt-1"
-                />
-                <label htmlFor="consent" className="ml-2 text-sm text-gray-700">
-                  I consent to be contacted by GoldenBridge Care regarding care services. 
-                  I understand this is not a commitment to purchase services. *
-                </label>
-              </div>
-
-              <button
-                type="submit"
-                className="w-full bg-indigo-700 text-white py-4 px-6 rounded-lg font-semibold hover:bg-indigo-800 transition-colors"
-              >
-                Submit Request
-              </button>
-            </form>
-          </div>
+          <ContactForm />
 
           {/* Contact Information */}
           <div className="space-y-8">
@@ -242,8 +78,8 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="font-medium text-gray-900">Email</p>
-                    <Link href="mailto:info@goldenbridgecare.com" className="text-indigo-600 hover:text-indigo-700">
-                      info@goldenbridgecare.com
+                    <Link href="mailto:info@goldenbridgecare.ca" className="text-indigo-600 hover:text-indigo-700">
+                      info@goldenbridgecare.ca
                     </Link>
                     <p className="text-sm text-gray-500">We respond within 2 hours</p>
                   </div>
