@@ -103,15 +103,15 @@ export default function ContactForm() {
           </div>
           <h2 className="text-2xl font-bold text-gray-900 mb-4">Thank You!</h2>
           <p className="text-gray-600 mb-6">
-            Your consultation request has been submitted successfully. We'll contact you within 24 hours to discuss your care needs.
+            Your consultation request has been submitted successfully. We&apos;ll contact you within 24 hours to discuss your care needs.
           </p>
           <div className="bg-green-50 border border-green-200 rounded-lg p-4 mb-6">
             <p className="text-green-800 font-medium">What happens next?</p>
             <ul className="text-green-700 text-sm mt-2 space-y-1">
               <li>• A care coordinator will review your request</li>
-              <li>• We'll call you to discuss your specific needs</li>
-              <li>• We'll create a personalized care plan</li>
-              <li>• You'll receive a detailed proposal</li>
+              <li>• We&apos;ll call you to discuss your specific needs</li>
+              <li>• We&apos;ll create a personalized care plan</li>
+              <li>• You&apos;ll receive a detailed proposal</li>
             </ul>
           </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -139,7 +139,7 @@ export default function ContactForm() {
         Request a Free Consultation
       </h2>
       <p className="text-gray-600 mb-8">
-        Fill out the form below and we'll contact you within 24 hours to discuss 
+        Fill out the form below and we&apos;ll contact you within 24 hours to discuss 
         your care needs and create a personalized plan.
       </p>
 
