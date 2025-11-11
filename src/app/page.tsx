@@ -32,8 +32,8 @@ export default function Home() {
                 <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 text-center shadow-2xl backdrop-blur-sm bg-opacity-90">
                   Get Free Consultation
                 </Link>
-                <Link href="tel:+14373609088" className="bg-white bg-opacity-90 hover:bg-opacity-100 text-gray-900 px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 text-center shadow-2xl backdrop-blur-sm">
-                  Call (437) 360-9088
+                <Link href="tel:+14376796446" className="bg-white bg-opacity-90 hover:bg-opacity-100 text-gray-900 px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 text-center shadow-2xl backdrop-blur-sm">
+                  Call (437) 679-6446
                 </Link>
               </div>
               <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 text-sm text-gray-100">
@@ -83,7 +83,7 @@ export default function Home() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                     </svg>
                   </div>
-                  <p className="text-2xl font-bold text-red-700">(416) 555-CARE</p>
+                  <p className="text-2xl font-bold text-red-700">(437) 679-6446</p>
                   <p className="text-sm text-red-600 font-medium">Crisis Support Hotline</p>
                 </div>
               </div>
@@ -127,7 +127,7 @@ export default function Home() {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white bg-opacity-10 rounded-xl p-6 backdrop-blur-sm">
               <div className="flex items-center gap-4 mb-4">
                 <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center">
@@ -157,6 +157,21 @@ export default function Home() {
                 non-PSW caregivers, ensuring we can meet every aspect of your care needs.
               </p>
             </div>
+
+            <div className="bg-white bg-opacity-10 rounded-xl p-6 backdrop-blur-sm">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+                  <svg className="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-white">Trusted Caregivers</h3>
+              </div>
+              <p className="text-blue-100">
+                Every team member has completed a Vulnerable Sector Check, full background screening, 
+                and reference verification for your peace of mind.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -169,7 +184,7 @@ export default function Home() {
               Comprehensive Elderly Care Services
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              From mental health support to daily living assistance, we provide everything 
+              From daily living assistance to specialized care, we provide everything 
               your loved one needs to live safely and happily at home.
             </p>
           </div>
@@ -257,33 +272,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Emergency Banner */}
-      <section className="py-12 bg-gradient-to-r from-red-600 to-pink-600">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="text-center text-white">
-            <div className="flex items-center justify-center gap-3 mb-4">
-              <div className="w-8 h-8 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 15.5c-.77.833.192 2.5 1.732 2.5z" />
-                </svg>
-              </div>
-              <h2 className="text-2xl md:text-3xl font-bold">Need Immediate Help?</h2>
-            </div>
-            <p className="text-xl text-red-100 mb-6">
-              Our emergency response team is available 24/7 for urgent situations
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="tel:+14165559911" className="bg-white text-red-600 px-8 py-4 rounded-lg font-bold hover:bg-gray-100 transition-colors">
-                Emergency: (416) 555-9911
-              </Link>
-              <Link href="tel:+14165554357" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-colors">
-                General: (416) 555-CARE
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="py-16 bg-indigo-700">
         <div className="max-w-6xl mx-auto px-6 text-center">
@@ -310,19 +298,7 @@ export default function Home() {
 
 const featuredServices = [
   {
-    icon: "💙",
-    title: "Mental Health Support",
-    description: "24/7 emotional support and crisis intervention with licensed professionals.",
-    features: [
-      "Crisis hotline available 24/7",
-      "Regular wellness check-ins",
-      "Depression and anxiety support",
-      "Grief counseling services"
-    ],
-    link: "/services#mental-health"
-  },
-  {
-    icon: "👥",
+    icon: "",
     title: "Companionship Care",
     description: "Friendly, engaging companionship to combat loneliness and isolation.",
     features: [
@@ -368,19 +344,6 @@ const featuredServices = [
     ],
     link: "/services#transportation"
   },
-  {
-    icon: "🚨",
-    title: "Emergency Response",
-    description: "Immediate assistance and coordination during urgent situations.",
-    features: [
-      "24/7 emergency hotline",
-      "Rapid response team",
-      "Medical emergency coordination",
-      "Family notification services"
-    ],
-    link: "/services#emergency"
-  },
-
   {
     icon: "🌙",
     title: "Overnight Care",
