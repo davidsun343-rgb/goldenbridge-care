@@ -44,9 +44,13 @@ export function Header() {
 
           <div className="lg:hidden">
             <button 
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="p-3 text-gray-700 hover:text-indigo-600 transition-colors rounded-xl hover:bg-indigo-50"
+              onClick={() => {
+                console.log('Mobile menu button clicked!');
+                setIsMenuOpen(!isMenuOpen);
+              }}
+              className="relative z-50 p-3 text-gray-700 hover:text-indigo-600 transition-colors rounded-xl hover:bg-indigo-50 border border-gray-300"
               aria-label="Toggle navigation menu"
+              type="button"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 {isMenuOpen ? (
