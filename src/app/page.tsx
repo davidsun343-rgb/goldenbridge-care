@@ -298,7 +298,7 @@ export default function Home() {
 
 const featuredServices = [
   {
-    icon: "",
+    icon: "👥",
     title: "Companionship Care",
     description: "Friendly, engaging companionship to combat loneliness and isolation.",
     features: [

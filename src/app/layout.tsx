@@ -37,8 +37,8 @@ export const metadata: Metadata = {
     images: ['/apple-icon'],
   },
   icons: {
-    icon: '/icon',
-    apple: '/apple-icon',
+    icon: '/images/goldenbridge_care_logo.jpg',
+    apple: '/images/goldenbridge_care_logo.jpg',
   },
 };
 
