@@ -2,10 +2,45 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Logo from "../components/Logo";
 import "./globals.css";
+import { Header } from "../components/Header";
 
 export const metadata: Metadata = {
   title: "GoldenBridge Care - Compassionate Elderly Care Services",
-  description: "Professional elderly care services including mental health support, companionship, medical assistance, and more. Serving families with dignity and respect.",
+  description: "Professional elderly care services including companionship, personal assistance, and more. Serving families with dignity and respect across the GTA.",
+  keywords: "elderly care, home care, senior care, companionship, GTA, Toronto, personal support",
+  authors: [{ name: "GoldenBridge Care" }],
+  creator: "GoldenBridge Care",
+  publisher: "GoldenBridge Care",
+  metadataBase: new URL('https://your-vercel-domain.vercel.app'), // Replace with your actual domain
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    title: "GoldenBridge Care - Compassionate Elderly Care Services",
+    description: "Professional elderly care services with dignity and respect across the GTA",
+    url: 'https://your-vercel-domain.vercel.app',
+    siteName: 'GoldenBridge Care',
+    images: [
+      {
+        url: '/apple-icon',
+        width: 180,
+        height: 180,
+        alt: 'GoldenBridge Care Logo',
+      },
+    ],
+    locale: 'en_CA',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary',
+    title: "GoldenBridge Care - Elderly Care Services",
+    description: "Professional elderly care services across the GTA",
+    images: ['/apple-icon'],
+  },
+  icons: {
+    icon: '/icon',
+    apple: '/apple-icon',
+  },
 };
 
 export default function RootLayout({
@@ -15,7 +50,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="min-h-screen bg-gray-50">
+      <body className="min-h-screen">
         <Header />
         <main>{children}</main>
         <Footer />
@@ -24,100 +59,99 @@ export default function RootLayout({
   );
 }
 
-function Header() {
-  return (
-    <header className="bg-gray-900 shadow-lg border-b border-gray-700 sticky top-0 z-50">
-      <div className="max-w-6xl mx-auto px-6 py-4">
-        <div className="flex items-center justify-between">
-          <Link href="/" className="flex items-center">
-            <Logo 
-              width={220} 
-              height={50} 
-              showText={true} 
-              className="hover:opacity-80 transition-opacity hidden sm:block text-white" 
-            />
-            {/* Mobile logo - icon only */}
-            <div className="sm:hidden">
-              <Logo width={140} height={40} showText={true} className="hover:opacity-80 transition-opacity text-white" />
-            </div>
-          </Link>
-          
-          <nav className="hidden md:flex items-center gap-6">
-            <Link href="/services" className="text-gray-300 hover:text-white font-medium transition-colors">
-              Services
-            </Link>
-            <Link href="/about" className="text-gray-300 hover:text-white font-medium transition-colors">
-              About
-            </Link>
-            <Link href="/pricing" className="text-gray-300 hover:text-white font-medium transition-colors">
-              Pricing
-            </Link>
-            <Link href="/contact" className="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 font-medium transition-colors">
-              Contact Us
-            </Link>
-          </nav>
-
-          <div className="md:hidden">
-            <button className="p-2 text-gray-300 hover:text-white transition-colors">
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            </button>
-          </div>
-        </div>
-      </div>
-    </header>
-  );
-}
-
 function Footer() {
   return (
-    <footer className="bg-gray-900 text-white">
-      <div className="max-w-6xl mx-auto px-6 py-12">
-        <div className="grid md:grid-cols-4 gap-8">
-          <div className="md:col-span-2">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 bg-indigo-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">GB</span>
+    <footer className="relative overflow-hidden">
+      {/* Gradient Background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900"></div>
+      
+      {/* Pattern Overlay */}
+      <div className="absolute inset-0 opacity-10" style={{
+        backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='m36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
+      }}></div>
+      
+      <div className="container relative z-10 section-padding text-white">
+        <div className="grid lg:grid-cols-4 gap-12">
+          <div className="lg:col-span-2">
+            <div className="flex items-center gap-4 mb-6">
+              <div className="w-14 h-14 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-2xl flex items-center justify-center shadow-lg">
+                <span className="text-white font-black text-xl">GB</span>
               </div>
               <div>
-                <h3 className="text-xl font-bold">GoldenBridge Care</h3>
-                <p className="text-gray-400 text-sm">Compassionate Care Services</p>
+                <h3 className="text-2xl font-black text-white">GoldenBridge Care</h3>
+                <p className="text-indigo-200 font-medium">Compassionate Care Services</p>
               </div>
             </div>
-            <p className="text-gray-300 mb-4">
+            <p className="text-gray-300 mb-8 text-lg leading-relaxed">
               Providing compassionate, professional elderly care services with a focus on dignity, 
               independence, and quality of life. Available 7 days a week across the GTA.
             </p>
-            <div className="text-sm text-gray-400">
-              <p>📞 Emergency Line: (437) 360-9088</p>
-              <p>📧 info@goldenbridgecare.com</p>
+            <div className="space-y-3">
+              <div className="flex items-center gap-3 text-indigo-200">
+                <div className="w-10 h-10 bg-red-500/20 rounded-xl flex items-center justify-center">
+                  <span className="text-xl">📞</span>
+                </div>
+                <div>
+                  <p className="font-semibold">Emergency Line</p>
+                  <p className="text-white font-bold">(437) 679-6446</p>
+                </div>
+              </div>
+              <div className="flex items-center gap-3 text-indigo-200">
+                <div className="w-10 h-10 bg-blue-500/20 rounded-xl flex items-center justify-center">
+                  <span className="text-xl">📧</span>
+                </div>
+                <div>
+                  <p className="font-semibold">Email</p>
+                  <p className="text-white">info@goldenbridgecare.com</p>
+                </div>
+              </div>
             </div>
           </div>
 
           <div>
-            <h4 className="font-semibold mb-4">Services</h4>
-            <ul className="space-y-2 text-gray-300">
-              <li><Link href="/services#companionship" className="hover:text-white">Companionship</Link></li>
-              <li><Link href="/services#mental-health" className="hover:text-white">Mental Health Support</Link></li>
-              <li><Link href="/services#medical" className="hover:text-white">Medical Assistance</Link></li>
-              <li><Link href="/services#daily-living" className="hover:text-white">Daily Living Support</Link></li>
+            <h4 className="font-bold text-xl mb-6 text-white">Services</h4>
+            <ul className="space-y-4">
+              {[
+                { name: "Companionship", href: "/services#companionship" },
+                { name: "Mental Health Support", href: "/services#mental-health" },
+                { name: "Health Support", href: "/services#health" },
+                { name: "Daily Living Support", href: "/services#daily-living" }
+              ].map((service, index) => (
+                <li key={index}>
+                  <Link href={service.href} className="text-gray-300 hover:text-white transition-colors flex items-center gap-2 group">
+                    <div className="w-2 h-2 bg-gradient-to-r from-indigo-400 to-purple-400 rounded-full group-hover:shadow-lg group-hover:shadow-indigo-300/50 transition-shadow"></div>
+                    <span>{service.name}</span>
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
           <div>
-            <h4 className="font-semibold mb-4">Company</h4>
-            <ul className="space-y-2 text-gray-300">
-              <li><Link href="/about" className="hover:text-white">About Us</Link></li>
-              <li><Link href="/pricing" className="hover:text-white">Pricing</Link></li>
-              <li><Link href="/contact" className="hover:text-white">Contact</Link></li>
-              <li><Link href="/privacy" className="hover:text-white">Privacy Policy</Link></li>
+            <h4 className="font-bold text-xl mb-6 text-white">Company</h4>
+            <ul className="space-y-4">
+              {[
+                { name: "About Us", href: "/about" },
+                { name: "Pricing", href: "/pricing" },
+                { name: "Contact", href: "/contact" },
+                { name: "Privacy Policy", href: "/privacy" }
+              ].map((link, index) => (
+                <li key={index}>
+                  <Link href={link.href} className="text-gray-300 hover:text-white transition-colors flex items-center gap-2 group">
+                    <div className="w-2 h-2 bg-gradient-to-r from-indigo-400 to-purple-400 rounded-full group-hover:shadow-lg group-hover:shadow-indigo-300/50 transition-shadow"></div>
+                    <span>{link.name}</span>
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; 2025 GoldenBridge Care. All rights reserved. Licensed and insured elderly care provider.</p>
+        <div className="border-t border-white/10 mt-16 pt-8 text-center text-gray-400">
+          <div className="max-w-2xl mx-auto">
+            <p className="text-lg">&copy; 2025 GoldenBridge Care. All rights reserved.</p>
+            <p className="mt-2 text-indigo-300">Licensed and insured elderly care provider serving the Greater Toronto Area</p>
+          </div>
         </div>
       </div>
     </footer>

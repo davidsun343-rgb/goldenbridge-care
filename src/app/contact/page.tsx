@@ -40,11 +40,11 @@ export default function ContactPage() {
                 </div>
               </div>
               <div className="space-y-2">
-                <Link href="tel:+14373609088" className="flex items-center gap-3 text-red-700 hover:text-red-800">
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21L8.5 10.5a11.086 11.086 0 00-3 3l1.114 1.726a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.948V20a2 2 0 01-2 2h-1C5.373 22 2 18.627 2 14V5z" />
+                <Link href="tel:+14376796446" className="flex items-center gap-3 text-red-700 hover:text-red-800">
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
-                  <span className="font-semibold">(437) 360-9088</span>
+                  <span className="font-semibold">437-679-6446</span>
                 </Link>
               </div>
             </div>
@@ -62,8 +62,8 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="font-medium text-gray-900">Main Office</p>
-                    <Link href="tel:+14373609088" className="text-indigo-600 hover:text-indigo-700">
-                      (437) 360-9088
+                    <Link href="tel:+14376796446" className="text-indigo-600 hover:text-indigo-700">
+                      437-679-6446
                     </Link>
                     <p className="text-sm text-gray-500">Monday - Friday: 8 AM - 8 PM</p>
                     <p className="text-sm text-gray-500">Saturday - Sunday: 9 AM - 5 PM</p>
@@ -95,22 +95,11 @@ export default function ContactPage() {
                   <div>
                     <p className="font-medium text-gray-900">Service Area</p>
                     <p className="text-gray-700">Greater Toronto Area (GTA)</p>
-                    <p className="text-sm text-gray-500">Including all surrounding municipalities</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-3">
-                  <div className="w-10 h-10 bg-indigo-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <svg className="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <p className="font-medium text-gray-900">Mental Health Helpline</p>
-                    <Link href="tel:+14373609088" className="text-green-600 hover:text-green-700 font-medium">
-                      (437) 360-9088
-                    </Link>
-                    <p className="text-sm text-gray-500">Available 24/7 for support calls</p>
+                    <p className="text-sm text-gray-600 mt-1">
+                      North York, Downtown Toronto, Mississauga, Richmond Hill, Scarborough, 
+                      Vaughan, Markham, Brampton, Etobicoke, York, East York, Pickering, 
+                      Ajax, Whitby, Oshawa, Oakville, Burlington, and surrounding areas
+                    </p>
                   </div>
                 </div>
               </div>
@@ -136,12 +125,15 @@ export default function ContactPage() {
 
                 <details className="group">
                   <summary className="flex justify-between items-center cursor-pointer text-gray-700 font-medium">
-                    What makes your mental health support different?
+                    What services do you provide?
+                    <svg className="w-5 h-5 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
                   </summary>
                   <p className="mt-2 text-gray-600 text-sm">
-                    Our mental health support includes trained professionals available 24/7, 
-                    regular wellness check-ins, and specialized support for depression, anxiety, 
-                    and grief counseling.
+                    We provide comprehensive non-medical home care including companionship, 
+                    daily living assistance, transportation, and health support services 
+                    tailored to your loved one's needs.
                   </p>
                 </details>
 
