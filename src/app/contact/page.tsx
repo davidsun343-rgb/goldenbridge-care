@@ -133,7 +133,7 @@ export default function ContactPage() {
                   <p className="mt-2 text-gray-600 text-sm">
                     We provide comprehensive non-medical home care including companionship, 
                     daily living assistance, transportation, and health support services 
-                    tailored to your loved one's needs.
+                    tailored to your loved one&apos;s needs.
                   </p>
                 </details>
 
