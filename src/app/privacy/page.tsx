@@ -1,6 +1,6 @@
 export default function PrivacyPage() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen pt-20">
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-6">
           <h1 className="text-4xl font-bold text-gray-900 mb-8">Privacy Policy</h1>
@@ -19,7 +19,7 @@ export default function PrivacyPage() {
             <ul className="list-disc list-inside space-y-2">
               <li>Contact information (name, address, phone number, email)</li>
               <li>Emergency contact details</li>
-              <li>Health information and medical history</li>
+              <li>Health information and personal history</li>
               <li>Insurance information</li>
               <li>Care preferences and needs assessment</li>
             </ul>
@@ -44,7 +44,7 @@ export default function PrivacyPage() {
             <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Information Sharing</h2>
             <p>We may share your information with:</p>
             <ul className="list-disc list-inside space-y-2">
-              <li>Healthcare providers involved in your care</li>
+              <li>Care providers involved in your care</li>
               <li>Insurance companies for billing purposes</li>
               <li>Emergency services when necessary</li>
               <li>Family members you&apos;ve designated as contacts</li>
@@ -72,7 +72,7 @@ export default function PrivacyPage() {
             <p>If you have questions about this Privacy Policy, please contact us:</p>
             <div className="bg-gray-50 p-6 rounded-lg mt-4">
               <p><strong>Email:</strong> privacy@goldenbridgecare.com</p>
-              <p><strong>Phone:</strong> (437) 360-9088</p>
+              <p><strong>Phone:</strong> (437) 679-6446</p>
               <p><strong>Mail:</strong> 123 Care Street, Toronto, ON M5V 3A8</p>
             </div>
           </div>

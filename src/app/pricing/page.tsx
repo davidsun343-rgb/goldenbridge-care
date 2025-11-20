@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function PricingPage() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen pt-20">
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-green-600 to-teal-700 text-white">
         <div className="max-w-6xl mx-auto px-6 py-20">

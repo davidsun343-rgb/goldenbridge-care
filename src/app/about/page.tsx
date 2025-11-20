@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen pt-20">
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white">
         <div className="max-w-6xl mx-auto px-6 py-20">
@@ -48,11 +48,11 @@ export default function AboutPage() {
             <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8">
               <div className="grid grid-cols-2 gap-6">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-indigo-700 mb-2">15+</div>
+                  <div className="text-3xl font-bold text-indigo-700 mb-2">6+</div>
                   <div className="text-sm text-gray-600">Years of Experience</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-indigo-700 mb-2">500+</div>
+                  <div className="text-3xl font-bold text-indigo-700 mb-2">120+</div>
                   <div className="text-sm text-gray-600">Families Served</div>
                 </div>
                 <div className="text-center">
@@ -103,7 +103,7 @@ export default function AboutPage() {
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Our Story</h3>
               <div className="space-y-4 text-gray-700">
                 <p>
-                  <strong>2010:</strong> Founded by Maria Santos, a registered nurse with 20 years 
+                  <strong>2010:</strong> Founded by Maria Santos, a certified care coordinator with 20 years 
                   of experience in geriatric care, after witnessing the gap in quality home care services.
                 </p>
                 <p>
@@ -129,7 +129,7 @@ export default function AboutPage() {
                 A Legacy of Compassionate Care
               </h2>
               <p className="text-lg text-gray-600 mb-6">
-                What started as a small nursing service has grown into the GTA&apos;s most trusted 
+                What started as a small care service has grown into the GTA&apos;s most trusted 
                 elderly care provider. Our journey has been guided by one simple principle: 
                 treating every client like family.
               </p>
@@ -151,37 +151,6 @@ export default function AboutPage() {
                 <p className="text-blue-700 font-medium mt-2">- Maria Santos, Founder & CEO</p>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Team Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Meet Our Leadership Team
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Our experienced leadership team brings decades of combined expertise in healthcare, 
-              social work, and elderly care services.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {team.map((member, index) => (
-              <div key={index} className="bg-white rounded-xl p-6 text-center shadow-sm">
-                <div className="w-24 h-24 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-white text-2xl font-bold">
-                    {member.name.split(' ').map(n => n[0]).join('')}
-                  </span>
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">{member.name}</h3>
-                <p className="text-indigo-600 font-medium mb-3">{member.role}</p>
-                <p className="text-gray-600 text-sm mb-4">{member.credentials}</p>
-                <p className="text-gray-700">{member.description}</p>
-              </div>
-            ))}
           </div>
         </div>
       </section>
@@ -228,8 +197,8 @@ export default function AboutPage() {
             <Link href="/contact" className="bg-white text-indigo-700 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
               Free Consultation
             </Link>
-            <Link href="tel:+14373609088" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-700 transition-colors">
-              Call (437) 360-9088
+            <Link href="tel:+14376796446" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-700 transition-colors">
+              Call (437) 679-6446
             </Link>
           </div>
         </div>
@@ -258,45 +227,6 @@ const values = [
     icon: "💎",
     title: "Integrity",
     description: "We operate with complete transparency, honesty, and ethical standards in all our interactions."
-  }
-];
-
-const team = [
-  {
-    name: "Maria Santos",
-    role: "Founder & CEO",
-    credentials: "RN, BSN, MSN in Gerontology",
-    description: "With over 25 years in healthcare and a specialization in geriatric nursing, Maria founded GoldenBridge Care to fill the gap in quality home care services."
-  },
-  {
-    name: "Dr. James Chen",
-    role: "Medical Director",
-    credentials: "MD, Geriatric Medicine Specialist",
-    description: "Board-certified geriatrician with 15 years of experience. Oversees all medical protocols and caregiver training programs."
-  },
-  {
-    name: "Sarah Williams",
-    role: "Director of Mental Health Services",
-    credentials: "MSW, LCSW, Certified Grief Counselor",
-    description: "Licensed clinical social worker specializing in elderly mental health. Leads our innovative mental health support programs."
-  },
-  {
-    name: "David Thompson",
-    role: "Operations Director",
-    credentials: "MBA Healthcare Management",
-    description: "Ensures seamless service delivery and coordinates our 24/7 emergency response team across the GTA."
-  },
-  {
-    name: "Lisa Park",
-    role: "Care Coordinator Supervisor",
-    credentials: "RN, Case Management Certification",
-    description: "Registered nurse with expertise in care coordination. Oversees caregiver assignments and ensures quality standards."
-  },
-  {
-    name: "Michael Rodriguez",
-    role: "Training & Development Manager",
-    credentials: "Certified Nursing Assistant Instructor",
-    description: "Leads our comprehensive caregiver training program and ensures all staff maintain current certifications."
   }
 ];
 
