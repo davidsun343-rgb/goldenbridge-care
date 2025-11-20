@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://your-vercel-domain.vercel.app/sitemap.xml
+
+# Additional sitemaps
+Sitemap: https://your-vercel-domain.vercel.app/favicon.ico
