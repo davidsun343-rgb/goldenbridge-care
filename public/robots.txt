@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://your-vercel-domain.vercel.app/sitemap.xml
+Sitemap: https://goldenbridgecare.ca/sitemap.xml
 
 # Additional sitemaps
-Sitemap: https://your-vercel-domain.vercel.app/favicon.ico
+Sitemap: https://goldenbridgecare.ca/favicon.ico
