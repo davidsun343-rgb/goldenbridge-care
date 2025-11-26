@@ -214,7 +214,7 @@ export default function Home() {
         {/* Background Image */}
         <div className="absolute inset-0 bg-gray-100">
           <img 
-            src="/images/elderly.jpg" 
+            src="/images/Elderly.jpg" 
             alt="Elderly care background"
             className="w-full h-full object-cover object-top opacity-35"
           />
