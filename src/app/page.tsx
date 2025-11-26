@@ -26,7 +26,7 @@ export default function Home() {
               </h1>
               <p className="mt-6 text-xl text-gray-100 leading-relaxed drop-shadow-lg">
                 Professional care services including <strong className="text-white">mental health support</strong>, companionship, 
-                medical assistance, and daily living help. Available 24/7 across the Greater Toronto Area.
+                personal care assistance, and daily living help. Available across the Greater Toronto Area.
               </p>
               <div className="mt-8 flex flex-col sm:flex-row gap-4">
                 <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 text-center shadow-2xl backdrop-blur-sm bg-opacity-90">
@@ -36,18 +36,12 @@ export default function Home() {
                   Call (437) 679-6446
                 </Link>
               </div>
-              <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 text-sm text-gray-100">
+              <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-sm text-gray-100">
                 <div className="flex items-center gap-2 bg-black bg-opacity-30 px-3 py-2 rounded-lg backdrop-blur-sm">
                   <svg className="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                   Licensed & Insured
-                </div>
-                <div className="flex items-center gap-2 bg-black bg-opacity-30 px-3 py-2 rounded-lg backdrop-blur-sm">
-                  <svg className="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  Same-Week Start
                 </div>
                 <div className="flex items-center gap-2 bg-black bg-opacity-30 px-3 py-2 rounded-lg backdrop-blur-sm">
                   <svg className="w-5 h-5 text-red-400" fill="currentColor" viewBox="0 0 20 20">
@@ -123,7 +117,7 @@ export default function Home() {
               Fully Qualified & Certified Care Team
             </h2>
             <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-              Every member of our team is professionally trained and certified to provide the highest quality care
+              Every member of our team is selectively chosen, professionally trained and certified to provide the highest quality care
             </p>
           </div>
           
@@ -189,6 +183,7 @@ export default function Home() {
             </p>
           </div>
 
+          {/* Services Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuredServices.map((service, index) => (
               <div key={index} className="group bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-shadow">
@@ -215,8 +210,18 @@ export default function Home() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-6">
+      <section className="relative py-16 bg-gray-50 overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 bg-gray-100">
+          <img 
+            src="/images/elderly.jpg" 
+            alt="Elderly care background"
+            className="w-full h-full object-cover object-top opacity-35"
+          />
+          <div className="absolute inset-0 bg-white/60"></div>
+        </div>
+        
+        <div className="relative max-w-6xl mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Why Families Choose GoldenBridge Care
@@ -310,15 +315,16 @@ const featuredServices = [
     link: "/services#companionship"
   },
   {
-    icon: "🏥",
-    title: "Medical Assistance",
-    description: "Professional support with healthcare needs and medical coordination.",
+    icon: "🧴",
+    title: "Personal Care Services",
+    description: "Compassionate assistance with personal hygiene and daily care routines.",
     features: [
-      "Medical appointment coordination",
-      "Health monitoring",
-      "Communication with healthcare providers"
+      "Bathing and grooming assistance",
+      "Dressing and clothing support",
+      "Personal hygiene maintenance",
+      "Dignity-focused care approach"
     ],
-    link: "/services#medical"
+    link: "/services#personal-care"
   },
   {
     icon: "🏠",
@@ -337,10 +343,10 @@ const featuredServices = [
     title: "Transportation Services",
     description: "Safe, reliable transportation for appointments and social activities.",
     features: [
-      "Medical appointment transport",
+      "Appointment transportation",
       "Grocery shopping trips",
       "Social visits and outings",
-      "Emergency transportation"
+      "Personal errands assistance"
     ],
     link: "/services#transportation"
   },

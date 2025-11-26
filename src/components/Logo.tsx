@@ -13,7 +13,7 @@ export default function Logo({ className = "", width = 200, height = 60, showTex
       <svg
         width={width}
         height={height}
-        viewBox="0 0 200 60"
+        viewBox="0 0 300 60"
         className="fill-current max-w-full h-auto"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -51,22 +51,23 @@ export default function Logo({ className = "", width = 200, height = 60, showTex
           <g>
             <text
               x="100"
-              y="25"
-              fontSize="18"
+              y="22"
+              fontSize="20"
               fontWeight="bold"
               fill="currentColor"
-              fontFamily="Arial, sans-serif"
+              fontFamily="Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
             >
-              GoldenBridge
+              GoldenBridge Care
             </text>
             <text
               x="100"
-              y="45"
-              fontSize="14"
+              y="42"
+              fontSize="16"
+              fontWeight="normal"
               fill="currentColor"
-              fontFamily="Arial, sans-serif"
+              fontFamily="Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
             >
-              Care Services
+              Elderly Services
             </text>
           </g>
         )}

@@ -108,7 +108,7 @@ export default function ServicesPage() {
               Complete Care Services
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              From daily living assistance to specialized medical support, we provide comprehensive care 
+              From daily living assistance to specialized personal care support, we provide comprehensive care 
               to help seniors live independently and safely at home.
             </p>
           </div>
@@ -167,15 +167,15 @@ const services: Service[] = [
     link: "#companionship"
   },
   {
-    icon: "🏥",
-    title: "Medical Assistance",
-    description: "Professional support with healthcare needs and medical appointments.",
+    icon: "🧴",
+    title: "Personal Care Services",
+    description: "Compassionate assistance with personal hygiene and daily care routines.",
     features: [
-      "Medical appointment coordination",
-      "Health monitoring and reporting",
-      "Communication with doctors"
+      "Bathing and grooming assistance",
+      "Dressing and clothing support",
+      "Personal hygiene maintenance"
     ],
-    link: "#medical"
+    link: "#personal-care"
   },
   {
     icon: "🏠",
@@ -194,7 +194,7 @@ const services: Service[] = [
     title: "Transportation Services",
     description: "Safe, reliable transportation for appointments and social activities.",
     features: [
-      "Medical appointment transportation",
+      "Appointment transportation",
       "Grocery shopping assistance",
       "Social outings and visits",
       "Emergency transportation"

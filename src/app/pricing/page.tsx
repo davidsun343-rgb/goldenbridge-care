@@ -62,7 +62,7 @@ export default function PricingPage() {
               <div className="space-y-4">
                 <div className="flex justify-between items-center py-2 border-b border-gray-100">
                   <span className="text-gray-700">Overnight (12h, non-medical)</span>
-                  <span className="font-semibold text-gray-900">$260/night</span>
+                  <span className="font-semibold text-gray-900">$300/night</span>
                 </div>
                 <div className="flex justify-between items-center py-2 border-b border-gray-100">
                   <span className="text-gray-700">Awake Night (10h, frequent assistance)</span>
@@ -232,7 +232,7 @@ export default function PricingPage() {
 const carePackages = [
   {
     name: "Companion Care",
-    price: "$34",
+    price: "$32",
     period: "/hour",
     description: "Friendly companionship and light assistance",
     features: [
@@ -244,12 +244,12 @@ const carePackages = [
       "Walk support",
       "Social outings"
     ],
-    hours: "6 hours/week minimum • 3 hours/visit minimum",
+    hours: "3 hours/week minimum • 3 hours/visit minimum",
     popular: false
   },
   {
     name: "Personal Care (PSW)",
-    price: "$38",
+    price: "$35",
     period: "/hour", 
     description: "All Companion Care plus personal care assistance",
     features: [
@@ -261,7 +261,7 @@ const carePackages = [
       "Skin checks",
       "Dementia-informed routines"
     ],
-    hours: "8 hours/week minimum • 3 hours/visit minimum",
+    hours: "6 hours/week minimum • 3 hours/visit minimum",
     popular: true
   },
   {

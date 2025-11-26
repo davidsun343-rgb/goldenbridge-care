@@ -122,10 +122,10 @@ export default function ContactForm() {
               Submit Another Request
             </button>
             <a
-              href="tel:+14373609088"
+              href="tel:+14376796446"
               className="border border-indigo-700 text-indigo-700 px-6 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors text-center"
             >
-              Call Us Now: (437) 360-9088
+              Call Us Now: 437-679-6446
             </a>
           </div>
         </div>
@@ -217,7 +217,7 @@ export default function ContactForm() {
             value={formData.phone}
             onChange={handleInputChange}
             className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
-            placeholder="(437) 360-9088"
+            placeholder="437-679-6446"
           />
         </div>
 
@@ -250,7 +250,7 @@ export default function ContactForm() {
             {[
               "Mental Health Support & Calling",
               "Companionship Services",
-              "Medical Assistance",
+              "Personal Care Services",
               "Daily Living Support",
               "Transportation Services",
               "Emergency Response",
@@ -302,7 +302,7 @@ export default function ContactForm() {
             value={formData.message}
             onChange={handleInputChange}
             className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
-            placeholder="Please share any specific care needs, medical conditions, or questions you have..."
+            placeholder="Please share any specific care needs, health conditions, or questions you have..."
           ></textarea>
         </div>
 
