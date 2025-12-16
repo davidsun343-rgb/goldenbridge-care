@@ -159,11 +159,6 @@ const categories = Array.from(new Set(faqs.map(faq => faq.category)));
 
 export default function FAQPage() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
-  const [selectedCategory, setSelectedCategory] = useState<string>("All");
-
-  const filteredFaqs = selectedCategory === "All" 
-    ? faqs 
-    : faqs.filter(faq => faq.category === selectedCategory);
 
   const toggleFAQ = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -257,54 +252,20 @@ export default function FAQPage() {
         </div>
       </section>
 
-      {/* Category Filter */}
-      <section className="py-8 bg-white/80 backdrop-blur-md sticky top-20 z-10 border-b border-gray-200 shadow-sm">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="mb-4 text-center">
-            <h3 className="text-sm font-semibold text-gray-600 uppercase tracking-wide">Filter by Topic</h3>
-          </div>
-          <div className="flex flex-wrap gap-3 justify-center">
-            <button
-              onClick={() => setSelectedCategory("All")}
-              className={`px-6 py-3 rounded-xl font-semibold transition-all transform hover:scale-105 ${
-                selectedCategory === "All"
-                  ? "bg-gradient-to-r from-indigo-600 to-purple-600 text-white shadow-lg"
-                  : "bg-white text-gray-700 hover:bg-gray-50 border-2 border-gray-200 hover:border-indigo-300"
-              }`}
-            >
-              All Questions
-            </button>
-            {categories.map((category) => (
-              <button
-                key={category}
-                onClick={() => setSelectedCategory(category)}
-                className={`px-6 py-3 rounded-xl font-semibold transition-all transform hover:scale-105 ${
-                  selectedCategory === category
-                    ? "bg-gradient-to-r from-indigo-600 to-purple-600 text-white shadow-lg"
-                    : "bg-white text-gray-700 hover:bg-gray-50 border-2 border-gray-200 hover:border-indigo-300"
-                }`}
-              >
-                {category}
-              </button>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* FAQ Accordion */}
       <section className="py-20 bg-gradient-to-b from-white to-gray-50">
         <div className="max-w-4xl mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              {selectedCategory === "All" ? "All Your Questions Answered" : `${selectedCategory} Questions`}
+              All Your Questions Answered
             </h2>
             <p className="text-gray-600 text-lg">
-              {filteredFaqs.length} {filteredFaqs.length === 1 ? 'question' : 'questions'} in this category
+              {faqs.length} common questions about our elderly care services
             </p>
           </div>
           
           <div className="space-y-4">
-            {filteredFaqs.map((faq, index) => (
+            {faqs.map((faq, index) => (
               <div
                 key={index}
                 className={`bg-white border-2 rounded-2xl overflow-hidden transition-all duration-300 ${

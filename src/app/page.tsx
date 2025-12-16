@@ -54,7 +54,7 @@ export default function Home() {
                   <svg className="w-5 h-5 text-blue-400" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"/>
                   </svg>
-                  PSW & Non-PSW Team
+                  PSW Professionals
                 </div>
                 <div className="flex items-center gap-2 bg-black bg-opacity-30 px-3 py-2 rounded-lg backdrop-blur-sm">
                   <svg className="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
@@ -105,11 +105,11 @@ export default function Home() {
                     <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"/>
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-white">PSW & Non-PSW Professionals</h3>
+                <h3 className="text-xl font-bold text-white">PSW Professionals</h3>
               </div>
               <p className="text-blue-100">
-                Our comprehensive team includes certified Personal Support Workers (PSWs) and skilled 
-                non-PSW caregivers, ensuring we can meet every aspect of your care needs.
+                Our team consists exclusively of certified Personal Support Workers (PSWs) who are professionally trained
+                and qualified to provide the highest standard of elderly care services.
               </p>
             </div>
 
@@ -352,8 +352,8 @@ const whyChooseUs = [
   },
   {
     icon: "👥",
-    title: "PSW & Non-PSW Team",
-    description: "Comprehensive team of certified Personal Support Workers and skilled non-PSW caregivers to serve every need."
+    title: "PSW Professionals",
+    description: "All our caregivers are certified Personal Support Workers (PSWs) professionally trained to provide expert elderly care."
   },
   {
     icon: "💝",
