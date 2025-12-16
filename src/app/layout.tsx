@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Script from "next/script";
 import "./globals.css";
 import { Header } from "../components/Header";
 
@@ -49,19 +50,21 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
+      <head />
+      <body className="min-h-screen">
         {/* Google tag (gtag.js) */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17720351123"></script>
-        <script dangerouslySetInnerHTML={{
-          __html: `
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-17720351123"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'AW-17720351123');
-          `
-        }} />
-      </head>
-      <body className="min-h-screen">
+          `}
+        </Script>
         <Header />
         <main>{children}</main>
         <Footer />
