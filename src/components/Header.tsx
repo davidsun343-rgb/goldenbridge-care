@@ -37,6 +37,10 @@ export function Header() {
               Pricing
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-indigo-600 to-purple-600 group-hover:w-full transition-all duration-300"></span>
             </Link>
+            <Link href="/faq" className="text-gray-700 hover:text-indigo-600 font-semibold transition-colors relative group">
+              FAQ
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-indigo-600 to-purple-600 group-hover:w-full transition-all duration-300"></span>
+            </Link>
             <Link href="/contact" className="btn-primary">
               <span>Contact Us</span>
             </Link>
@@ -67,12 +71,34 @@ export function Header() {
         {isMenuOpen && (
           <div className="lg:hidden border-t border-gray-200 bg-white/95 backdrop-blur-md">
             <nav className="py-4 space-y-2">
+              {/* Click-to-Call Button */}
+              <a
+                href="tel:+14376796446"
+                className="block mx-2 mb-4 bg-green-600 text-white px-6 py-4 rounded-xl font-bold text-lg hover:bg-green-700 transition-colors text-center shadow-lg"
+              >
+                Call (437) 679-6446
+              </a>
+              
+              <Link 
+                href="/pricing" 
+                className="block px-4 py-3 text-gray-700 hover:text-indigo-600 hover:bg-indigo-50 transition-colors rounded-lg mx-2"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Pricing
+              </Link>
               <Link 
                 href="/services" 
                 className="block px-4 py-3 text-gray-700 hover:text-indigo-600 hover:bg-indigo-50 transition-colors rounded-lg mx-2"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Services
+              </Link>
+              <Link 
+                href="/faq" 
+                className="block px-4 py-3 text-gray-700 hover:text-indigo-600 hover:bg-indigo-50 transition-colors rounded-lg mx-2"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                FAQ
               </Link>
               <Link 
                 href="/about" 
@@ -82,18 +108,11 @@ export function Header() {
                 About
               </Link>
               <Link 
-                href="/pricing" 
-                className="block px-4 py-3 text-gray-700 hover:text-indigo-600 hover:bg-indigo-50 transition-colors rounded-lg mx-2"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Pricing
-              </Link>
-              <Link 
                 href="/contact" 
                 className="block mx-2 mt-4 bg-indigo-600 text-white px-4 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors text-center"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Contact Us
+                Contact Form
               </Link>
             </nav>
           </div>

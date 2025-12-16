@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 
 interface FormData {
   firstName: string;
@@ -27,6 +28,7 @@ const initialFormData: FormData = {
 };
 
 export default function ContactForm() {
+  const router = useRouter();
   const [formData, setFormData] = useState<FormData>(initialFormData);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
@@ -78,8 +80,8 @@ export default function ContactForm() {
       if (response.ok) {
         setSubmitStatus('success');
         setFormData(initialFormData);
-        // Scroll to top to show success message
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        // Redirect to thank you page
+        router.push('/thank-you');
       } else {
         const errorData = await response.json();
         throw new Error(errorData.error || 'Failed to submit form');

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import QuickContactForm from "@/components/QuickContactForm";
 
 export default function Home() {
   return (
@@ -64,47 +65,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-8">
-              <div className="text-center mb-6">
-                <h3 className="text-2xl font-bold text-gray-900">Emergency Mental Health Support</h3>
-                <p className="text-gray-600 mt-2">Available 24/7 when you need it most</p>
-              </div>
-              
-              <div className="bg-gradient-to-r from-red-50 to-pink-50 rounded-xl p-6 mb-6">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <svg className="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                    </svg>
-                  </div>
-                  <p className="text-2xl font-bold text-red-700">(437) 679-6446</p>
-                  <p className="text-sm text-red-600 font-medium">Crisis Support Hotline</p>
-                </div>
-              </div>
-
-              <div className="grid grid-cols-2 gap-4 text-sm">
-                <div className="bg-blue-50 p-4 rounded-lg text-center">
-                  <p className="font-semibold text-blue-900">Response Time</p>
-                  <p className="text-blue-700">Under 30 minutes</p>
-                </div>
-                <div className="bg-green-50 p-4 rounded-lg text-center">
-                  <p className="font-semibold text-green-900">Availability</p>
-                  <p className="text-green-700">24/7/365</p>
-                </div>
-                <div className="bg-purple-50 p-4 rounded-lg text-center">
-                  <p className="font-semibold text-purple-900">Service Area</p>
-                  <p className="text-purple-700">All of GTA</p>
-                </div>
-                <div className="bg-amber-50 p-4 rounded-lg text-center">
-                  <p className="font-semibold text-amber-900">Coverage</p>
-                  <p className="text-amber-700">Insurance Accepted</p>
-                </div>
-              </div>
-              
-              <Link href="/services#mental-health" className="mt-6 w-full bg-indigo-700 text-white py-3 px-6 rounded-lg font-semibold hover:bg-indigo-800 transition-colors text-center block">
-                Learn More About Mental Health Services
-              </Link>
-            </div>
+            <QuickContactForm />
           </div>
         </div>
       </section>
@@ -186,22 +147,24 @@ export default function Home() {
           {/* Services Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuredServices.map((service, index) => (
-              <div key={index} className="group bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-shadow">
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                  <span className="text-2xl">{service.icon}</span>
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
-                <p className="text-gray-600 mb-4">{service.description}</p>
-                <ul className="space-y-2 mb-6">
+              <div key={index} className="group bg-white rounded-lg border-2 border-gray-200 p-8 hover:border-indigo-300 hover:shadow-xl transition-all">
+                <h3 className="text-2xl font-bold text-gray-900 mb-3">{service.title}</h3>
+                <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>
+                <ul className="space-y-3 mb-6">
                   {service.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-start gap-2 text-sm text-gray-600">
-                      <span className="w-1.5 h-1.5 bg-indigo-500 rounded-full mt-2 flex-shrink-0"></span>
-                      {feature}
+                    <li key={idx} className="flex items-start gap-3 text-gray-700">
+                      <svg className="w-5 h-5 text-indigo-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                      </svg>
+                      <span className="text-sm">{feature}</span>
                     </li>
                   ))}
                 </ul>
-                <Link href={service.link} className="text-indigo-700 font-medium hover:text-indigo-800 text-sm">
-                  Learn more →
+                <Link href={service.link} className="inline-flex items-center text-indigo-700 font-semibold hover:text-indigo-800 transition-colors">
+                  Learn more
+                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
                 </Link>
               </div>
             ))}
