@@ -1,0 +1,53 @@
+<svg
+  width="1600"
+  height="320"
+  viewBox="0 0 300 60"
+  xmlns="http://www.w3.org/2000/svg"
+  role="img"
+  aria-label="GoldenBridge Care logo"
+>
+  <title>GoldenBridge Care</title>
+
+  <g>
+    <path
+      d="M20 45 Q35 25 50 45 Q65 25 80 45"
+      stroke="#2563EB"
+      stroke-width="3"
+      fill="none"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <line x1="35" y1="45" x2="35" y2="50" stroke="#2563EB" stroke-width="2" />
+    <line x1="65" y1="45" x2="65" y2="50" stroke="#2563EB" stroke-width="2" />
+    <line x1="15" y1="50" x2="85" y2="50" stroke="#2563EB" stroke-width="3" />
+
+    <path
+      d="M45 30 C45 27, 48 25, 50 27 C52 25, 55 27, 55 30 C55 33, 50 38, 50 38 C50 38, 45 33, 45 30 Z"
+      fill="#EF4444"
+    />
+    <circle cx="50" cy="42" r="2" fill="#EAB308" />
+  </g>
+
+  <g>
+    <text
+      x="100"
+      y="22"
+      font-size="20"
+      font-weight="700"
+      fill="#111827"
+      font-family="Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
+    >
+      GoldenBridge Care
+    </text>
+    <text
+      x="100"
+      y="42"
+      font-size="16"
+      font-weight="400"
+      fill="#111827"
+      font-family="Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
+    >
+      Elderly Services
+    </text>
+  </g>
+</svg>

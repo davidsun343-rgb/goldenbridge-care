@@ -1,8 +1,15 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Script from "next/script";
+import { Inter } from 'next/font/google';
 import "./globals.css";
 import { Header } from "../components/Header";
+
+const inter = Inter({ 
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-inter',
+});
 
 export const metadata: Metadata = {
   title: "GoldenBridge Care - Compassionate Elderly Care Services",
@@ -49,9 +56,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={inter.variable}>
       <head />
-      <body className="min-h-screen">
+      <body className={`${inter.className} min-h-screen antialiased`}>
         {/* Google tag (gtag.js) */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=AW-17720351123"

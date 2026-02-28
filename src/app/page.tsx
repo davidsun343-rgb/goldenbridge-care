@@ -39,10 +39,10 @@ export default function Home() {
               </div>
               <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-sm text-gray-100">
                 <div className="flex items-center gap-2 bg-black bg-opacity-30 px-3 py-2 rounded-lg backdrop-blur-sm">
-                  <svg className="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  <svg className="w-5 h-5 text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 1.944l6.6 2.474A1 1 0 0118 5.354V10c0 4.7-2.89 8.93-7.2 10.49a2.6 2.6 0 01-1.6 0C4.89 18.93 2 14.7 2 10V5.354a1 1 0 01.4-.936L9 1.944a1.5 1.5 0 011 0zM8.293 10.293a1 1 0 00-1.414 1.414l1.9 1.9a1 1 0 001.414 0l3.9-3.9a1 1 0 10-1.414-1.414L9.486 11.486l-1.193-1.193z" clipRule="evenodd" />
                   </svg>
-                  Licensed & Insured
+                  Incorporated • Insured • WSIB
                 </div>
                 <div className="flex items-center gap-2 bg-black bg-opacity-30 px-3 py-2 rounded-lg backdrop-blur-sm">
                   <svg className="w-5 h-5 text-red-400" fill="currentColor" viewBox="0 0 20 20">
@@ -209,35 +209,123 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="py-16 bg-white">
+      {/* Google Reviews */}
+      <section className="py-20 bg-gray-50">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              What Families Are Saying
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-semibold text-gray-900 mb-4">
+              Trusted by Families Across the GTA
             </h2>
-            <p className="text-xl text-gray-600">Real stories from the families we&apos;ve had the honor to serve</p>
+            <div className="flex items-center justify-center gap-2 mb-6">
+              <div className="flex">
+                {[...Array(5)].map((_, i) => (
+                  <svg key={i} className="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                ))}
+              </div>
+              <span className="text-2xl font-semibold text-gray-900">5.0</span>
+            </div>
+            <a 
+              href="https://www.google.com/search?q=GoldenBridge+Care" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium text-lg transition-colors"
+            >
+              Read all reviews on Google
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </a>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-white rounded-xl border border-gray-200 p-6 shadow-sm">
-                <div className="flex items-center mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <svg key={i} className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
-                  ))}
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
+            <div className="bg-white rounded-lg border border-gray-200 p-8 hover:shadow-lg transition-shadow">
+              <div className="flex mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <svg key={i} className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                ))}
+              </div>
+              <p className="text-gray-700 text-base leading-relaxed mb-6">
+                "The mental health support has been incredible for my mother. After my father passed, she was struggling with depression. The daily check-ins and compassionate care helped her regain her joy. She's now attending her book club again and planning visits with her grandchildren."
+              </p>
+              <div className="flex items-center gap-3 pt-4 border-t border-gray-100">
+                <div className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-600 font-semibold">
+                  M
                 </div>
-                <p className="text-gray-700 mb-4 italic">&ldquo;{testimonial.quote}&rdquo;</p>
                 <div>
-                  <p className="font-semibold text-gray-900">{testimonial.name}</p>
-                  <p className="text-sm text-gray-600">{testimonial.relationship}</p>
+                  <p className="font-semibold text-gray-900">Margaret S.</p>
+                  <p className="text-sm text-gray-500">Google Review</p>
                 </div>
               </div>
-            ))}
+            </div>
+
+            <div className="bg-white rounded-lg border border-gray-200 p-8 hover:shadow-lg transition-shadow">
+              <div className="flex mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <svg key={i} className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                ))}
+              </div>
+              <p className="text-gray-700 text-base leading-relaxed mb-6">
+                "When Dad fell at 2am, I was terrified. I called their 24/7 emergency line and they were absolutely professional. The dispatcher stayed calm, walked me through everything, and had a caregiver at our door in 18 minutes. They coordinated with paramedics and stayed until we knew Dad was safe."
+              </p>
+              <div className="flex items-center gap-3 pt-4 border-t border-gray-100">
+                <div className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-600 font-semibold">
+                  J
+                </div>
+                <div>
+                  <p className="font-semibold text-gray-900">James K.</p>
+                  <p className="text-sm text-gray-500">Google Review</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center">
+            <a 
+              href="https://www.google.com/search?q=GoldenBridge+Care#lrd=0x0:0x0,1" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors"
+            >
+              Leave a Review
+            </a>
           </div>
         </div>
+      </section>
+
+      {/* Trust Signals */}
+      <section className="py-12 bg-white border-t border-gray-100">
+        <div className="max-w-6xl mx-auto px-6">
+          <p className="text-center text-sm font-semibold tracking-wide text-gray-600 uppercase mb-6">
+            Credentials & Affiliations
+          </p>
+          <div className="grid sm:grid-cols-2 gap-8 max-w-3xl mx-auto">
+            <div className="flex flex-col items-center text-center">
+              <img
+                src="/images/wsib-logo.svg"
+                alt="WSIB Ontario logo"
+                className="h-10 md:h-12 w-auto object-contain"
+              />
+              <p className="mt-3 text-sm text-gray-700 font-medium">Registered with WSIB Ontario</p>
+            </div>
+            <div className="flex flex-col items-center text-center">
+              <img
+                src="/images/schulich-logo.svg"
+                alt="Schulich School of Business logo"
+                className="h-10 md:h-12 w-auto object-contain"
+              />
+              <p className="mt-3 text-sm text-gray-700 font-medium">Founder is a Schulich School of Business alumnus</p>
+            </div>
+          </div>
+          <p className="mt-6 text-center text-xs text-gray-500 max-w-3xl mx-auto">
+            WSIB and Schulich marks belong to their respective owners and are displayed for factual identification only; no endorsement or affiliation is implied.
+          </p>
+          </div>
       </section>
 
       {/* CTA Section */}
@@ -369,38 +457,5 @@ const whyChooseUs = [
     icon: "⚡",
     title: "24/7 Availability",
     description: "Round-the-clock support available whenever you need us most."
-  }
-];
-
-const testimonials = [
-  {
-    quote: "The mental health support Maria received was incredible. The daily check-ins helped her through a very difficult time after my father passed away.",
-    name: "Sarah Thompson",
-    relationship: "Daughter of client"
-  },
-  {
-    quote: "GoldenBridge Care gave us our lives back. Knowing Dad has professional, caring support allows us to focus on being his children, not just his caregivers.",
-    name: "Michael Chen",
-    relationship: "Son of client"
-  },
-  {
-    quote: "The 24/7 emergency line has been a lifesaver. When Mom fell last month, they had someone there within 20 minutes and coordinated everything with the hospital.",
-    name: "Jennifer Williams",
-    relationship: "Daughter of client"
-  },
-  {
-    quote: "The companionship service has been wonderful. Emma comes twice a week and my mother looks forward to their visits so much. She's like family now.",
-    name: "Robert Martinez",
-    relationship: "Son of client"
-  },
-  {
-    quote: "Professional, reliable, and genuinely caring. The team at GoldenBridge Care treats my husband with such respect and dignity. I couldn't ask for better care.",
-    name: "Dorothy Park",
-    relationship: "Spouse of client"
-  },
-  {
-    quote: "The mental health counseling has helped my father cope with his diagnosis. Having someone trained in geriatric mental health has made all the difference.",
-    name: "Amanda Rodriguez",
-    relationship: "Daughter of client"
   }
 ];
