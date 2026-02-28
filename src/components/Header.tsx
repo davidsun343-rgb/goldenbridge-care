@@ -8,9 +8,9 @@ export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-white/80 border-b border-white/20 shadow-lg">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200 shadow-sm md:backdrop-blur-md md:bg-white/80 md:border-white/20 md:shadow-lg">
       <div className="container">
-        <div className="flex items-center justify-between py-4">
+        <div className="flex items-center justify-between py-2.5 sm:py-4">
           <Link href="/" className="flex items-center group">
             <Logo 
               width={220} 
@@ -20,7 +20,7 @@ export function Header() {
             />
             {/* Mobile logo - icon only */}
             <div className="sm:hidden">
-              <Logo width={140} height={40} showText={true} className="group-hover:opacity-80 transition-opacity text-gray-900" />
+              <Logo width={52} height={52} showText={false} className="group-hover:opacity-80 transition-opacity text-gray-900" />
             </div>
           </Link>
           
@@ -48,15 +48,12 @@ export function Header() {
 
           <div className="lg:hidden">
             <button 
-              onClick={() => {
-                console.log('Mobile menu button clicked!');
-                setIsMenuOpen(!isMenuOpen);
-              }}
-              className="relative z-50 p-3 text-gray-700 hover:text-indigo-600 transition-colors rounded-xl hover:bg-indigo-50 border border-gray-300"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="relative z-50 p-2.5 text-gray-700 hover:text-indigo-600 transition-colors rounded-lg hover:bg-indigo-50 border border-gray-300"
               aria-label="Toggle navigation menu"
               type="button"
             >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 {isMenuOpen ? (
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 ) : (
@@ -69,7 +66,7 @@ export function Header() {
 
         {/* Mobile Navigation Menu */}
         {isMenuOpen && (
-          <div className="lg:hidden border-t border-gray-200 bg-white/95 backdrop-blur-md">
+          <div className="lg:hidden border-t border-gray-200 bg-white shadow-md">
             <nav className="py-4 space-y-2">
               {/* Click-to-Call Button */}
               <a
