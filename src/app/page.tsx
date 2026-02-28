@@ -249,7 +249,7 @@ export default function Home() {
                 ))}
               </div>
               <p className="text-gray-700 text-base leading-relaxed mb-6">
-                "The mental health support has been incredible for my mother. After my father passed, she was struggling with depression. The daily check-ins and compassionate care helped her regain her joy. She's now attending her book club again and planning visits with her grandchildren."
+                &ldquo;The mental health support has been incredible for my mother. After my father passed, she was struggling with depression. The daily check-ins and compassionate care helped her regain her joy. She&rsquo;s now attending her book club again and planning visits with her grandchildren.&rdquo;
               </p>
               <div className="flex items-center gap-3 pt-4 border-t border-gray-100">
                 <div className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-600 font-semibold">
@@ -271,7 +271,7 @@ export default function Home() {
                 ))}
               </div>
               <p className="text-gray-700 text-base leading-relaxed mb-6">
-                "When Dad fell at 2am, I was terrified. I called their 24/7 emergency line and they were absolutely professional. The dispatcher stayed calm, walked me through everything, and had a caregiver at our door in 18 minutes. They coordinated with paramedics and stayed until we knew Dad was safe."
+                &ldquo;When Dad fell at 2am, I was terrified. I called their 24/7 emergency line and they were absolutely professional. The dispatcher stayed calm, walked me through everything, and had a caregiver at our door in 18 minutes. They coordinated with paramedics and stayed until we knew Dad was safe.&rdquo;
               </p>
               <div className="flex items-center gap-3 pt-4 border-t border-gray-100">
                 <div className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-600 font-semibold">
