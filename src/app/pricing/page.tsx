@@ -2,37 +2,66 @@ import Link from "next/link";
 
 export default function PricingPage() {
   return (
-    <div className="min-h-screen pt-20">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-green-600 to-teal-700 text-white">
-        <div className="max-w-6xl mx-auto px-6 py-20">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Transparent Pricing
-            </h1>
-            <p className="text-xl text-green-100 mb-8 max-w-3xl mx-auto">
-              Quality elderly care shouldn&apos;t be a mystery. Our clear, upfront pricing 
-              ensures you know exactly what to expect with no hidden fees.
+    <div className="min-h-screen pt-20 bg-white">
+      <section className="py-16 md:py-24 border-b border-gray-200">
+        <div className="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <p className="text-sm md:text-base tracking-[0.2em] text-indigo-700 font-semibold mb-4 uppercase">
+              Clear Rates. Reliable Support.
             </p>
-            <div className="inline-flex items-center gap-2 bg-green-500 bg-opacity-30 px-6 py-3 rounded-full">
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-6 uppercase">
+              Pricing You Can Plan Around
+            </h1>
+            <p className="text-lg text-gray-600 leading-relaxed mb-8 max-w-xl">
+              We keep rates straightforward and explain every option in advance so your family can choose care with confidence.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link href="/contact" className="bg-indigo-700 text-white px-8 py-4 rounded-lg font-semibold hover:bg-indigo-800 transition-colors text-center">
+                Book Free Consultation
+              </Link>
+              <Link href="tel:+14376796446" className="border-2 border-indigo-700 text-indigo-700 px-8 py-4 rounded-lg font-semibold hover:bg-indigo-50 transition-colors text-center">
+                Call (437) 679-6446
+              </Link>
+            </div>
+            <div className="mt-8 inline-flex items-center gap-2 bg-gray-100 px-5 py-3 rounded-full">
+              <svg className="w-5 h-5 text-indigo-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
-              <span className="font-medium">Free Consultation & Assessment</span>
+              <span className="font-medium text-gray-700">Free consultation and care assessment</span>
             </div>
+          </div>
+
+          <div className="relative">
+            <img
+              src="/images/Elderly.jpg"
+              alt="Care coordinator discussing support options"
+              className="w-full h-[420px] object-cover rounded-2xl"
+            />
+            <div className="absolute inset-0 rounded-2xl ring-1 ring-gray-900/10"></div>
           </div>
         </div>
       </section>
 
-      {/* Core Service Packages */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-10 bg-gray-50 border-b border-gray-200">
+        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-5">
+          {serviceHighlights.map((item) => (
+            <div key={item.title} className="bg-white border border-gray-200 rounded-xl p-5">
+              <p className="text-sm font-semibold text-indigo-700 uppercase tracking-wide mb-2">{item.title}</p>
+              <p className="text-gray-600">{item.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Care Service Packages
+            <p className="text-sm font-semibold text-indigo-700 uppercase tracking-[0.16em] mb-3">Care Packages</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 uppercase">
+              Core Service Packages
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Professional care services with 3-hour visit minimums and weekly minimums for staffing stability.
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              All packages include a 3-hour visit minimum, personalized care planning, and consistent caregiver matching.
             </p>
           </div>
 
@@ -44,21 +73,21 @@ export default function PricingPage() {
         </div>
       </section>
 
-      {/* À La Carte Services */}
-      <section className="py-16 bg-blue-50">
+      <section className="py-16 bg-gray-50 border-y border-gray-200">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <p className="text-sm font-semibold text-indigo-700 uppercase tracking-[0.16em] mb-3">Specialty Care</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 uppercase">
               Specialty Services & Blocks
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Overnight care, live-in support, and convenient add-on services.
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Flexible overnight and live-in options, plus practical add-ons for day-to-day care needs.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-white rounded-xl border border-gray-200 p-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-6">Overnight & Live-in Care</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-6 uppercase">Overnight & Live-in Care</h3>
               <div className="space-y-4">
                 <div className="flex justify-between items-center py-2 border-b border-gray-100">
                   <span className="text-gray-700">Overnight (12h, non-medical)</span>
@@ -85,7 +114,7 @@ export default function PricingPage() {
             </div>
 
             <div className="bg-white rounded-xl border border-gray-200 p-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-6">À La Carte Add-ons</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-6 uppercase">À La Carte Add-ons</h3>
               <div className="space-y-4">
                 <div className="flex justify-between items-center py-2 border-b border-gray-100">
                   <span className="text-gray-700">Transportation (to appointments)</span>
@@ -121,13 +150,13 @@ export default function PricingPage() {
         </div>
       </section>
 
-      {/* Insurance & Payment */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12">
             <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Payment Options</h2>
-              <p className="text-lg text-gray-600 mb-6">
+              <p className="text-sm font-semibold text-indigo-700 uppercase tracking-[0.16em] mb-3">Billing & Insurance</p>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6 uppercase">Payment Options</h2>
+              <p className="text-lg text-gray-600 mb-8">
                 Clients pay GoldenBridge Care directly. Some insurance plans may provide reimbursement 
                 when you submit receipts. We offer flexible payment options to make quality care accessible.
               </p>
@@ -140,8 +169,8 @@ export default function PricingPage() {
                   </p>
                   <ul className="space-y-2">
                     {acceptedInsurance.map((insurance, index) => (
-                      <li key={index} className="flex items-center gap-3">
-                        <svg className="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                      <li key={index} className="flex items-center gap-3 bg-gray-50 rounded-lg px-3 py-2">
+                        <svg className="w-5 h-5 text-indigo-700" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                         </svg>
                         <span className="text-gray-700">{insurance}</span>
@@ -154,8 +183,8 @@ export default function PricingPage() {
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">Payment Methods</h3>
                   <ul className="space-y-2">
                     {paymentMethods.map((method, index) => (
-                      <li key={index} className="flex items-center gap-3">
-                        <svg className="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                      <li key={index} className="flex items-center gap-3 bg-gray-50 rounded-lg px-3 py-2">
+                        <svg className="w-5 h-5 text-indigo-700" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                         </svg>
                         <span className="text-gray-700">{method}</span>
@@ -166,8 +195,8 @@ export default function PricingPage() {
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-green-50 to-blue-50 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Get a Free Assessment</h3>
+            <div className="bg-indigo-700 rounded-2xl p-8 text-white">
+              <h3 className="text-2xl font-bold mb-6 uppercase">Get a Free Assessment</h3>
               <p className="text-gray-600 mb-6">
                 Not sure which services you need? Our care coordinators will assess your situation 
                 and recommend the most appropriate and cost-effective care plan.
@@ -175,27 +204,27 @@ export default function PricingPage() {
               
               <div className="space-y-4">
                 <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
-                    <span className="text-green-600 font-bold text-sm">1</span>
+                  <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
+                    <span className="text-white font-bold text-sm">1</span>
                   </div>
-                  <span className="text-gray-700">Free in-home consultation (60-90 minutes)</span>
+                  <span className="text-indigo-100">Free in-home consultation (60-90 minutes)</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
-                    <span className="text-green-600 font-bold text-sm">2</span>
+                  <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
+                    <span className="text-white font-bold text-sm">2</span>
                   </div>
-                  <span className="text-gray-700">Personalized care plan with transparent pricing</span>
+                  <span className="text-indigo-100">Personalized care plan with transparent pricing</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
-                    <span className="text-green-600 font-bold text-sm">3</span>
+                  <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
+                    <span className="text-white font-bold text-sm">3</span>
                   </div>
-                  <span className="text-gray-700">Insurance verification and payment planning</span>
+                  <span className="text-indigo-100">Insurance verification and payment planning</span>
                 </div>
               </div>
 
               <div className="mt-8">
-                <Link href="/contact" className="w-full bg-green-600 text-white py-4 px-6 rounded-lg font-semibold hover:bg-green-700 transition-colors inline-block text-center">
+                <Link href="/contact" className="w-full bg-white text-indigo-700 py-4 px-6 rounded-lg font-semibold hover:bg-indigo-50 transition-colors inline-block text-center">
                   Schedule Free Assessment
                 </Link>
               </div>
@@ -204,21 +233,21 @@ export default function PricingPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-16 bg-indigo-700">
+      <section className="py-16 bg-gray-900">
         <div className="max-w-6xl mx-auto px-6 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <p className="text-sm font-semibold text-indigo-300 uppercase tracking-[0.16em] mb-3">Need Help Choosing?</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 uppercase">
             Questions About Pricing?
           </h2>
-          <p className="text-xl text-indigo-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Our care coordinators are here to help you understand your options and 
             find the most cost-effective care solution.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="bg-white text-indigo-700 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+            <Link href="/contact" className="bg-indigo-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-indigo-700 transition-colors">
               Free Consultation
             </Link>
-            <Link href="tel:+14376796446" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-700 transition-colors">
+            <Link href="tel:+14376796446" className="border-2 border-gray-300 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-colors">
               Call (437) 679-6446
             </Link>
           </div>
@@ -312,16 +341,16 @@ interface CarePackageCardProps {
 
 function CarePackageCard({ name, price, period, description, features, hours, popular }: CarePackageCardProps) {
   return (
-    <div className={`relative bg-white rounded-xl border-2 p-6 ${popular ? 'border-green-500 shadow-lg' : 'border-gray-200'}`}>
+    <div className={`relative bg-white rounded-xl border-2 p-6 ${popular ? 'border-indigo-600 shadow-lg' : 'border-gray-200'}`}>
       {popular && (
         <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-          <span className="bg-green-500 text-white px-4 py-1 rounded-full text-sm font-medium">
-            Recommended
+          <span className="bg-indigo-600 text-white px-4 py-1 rounded-full text-sm font-medium">
+            Most Requested
           </span>
         </div>
       )}
       <div className="text-center mb-6">
-        <h3 className="text-xl font-semibold text-gray-900 mb-2">{name}</h3>
+        <h3 className="text-xl font-semibold text-gray-900 mb-2 uppercase">{name}</h3>
         <div className="mb-2">
           <span className="text-3xl font-bold text-gray-900">{price}</span>
           <span className="text-gray-600">{period}</span>
@@ -332,7 +361,7 @@ function CarePackageCard({ name, price, period, description, features, hours, po
       <ul className="space-y-3 mb-8">
         {features.map((feature: string, index: number) => (
           <li key={index} className="flex items-start gap-3">
-            <svg className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+            <svg className="w-5 h-5 text-indigo-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
               <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
             </svg>
             <span className="text-gray-700">{feature}</span>
@@ -343,12 +372,27 @@ function CarePackageCard({ name, price, period, description, features, hours, po
         href="/contact" 
         className={`w-full py-3 px-6 rounded-lg font-semibold text-center block transition-colors ${
           popular 
-            ? 'bg-green-600 text-white hover:bg-green-700' 
+            ? 'bg-indigo-700 text-white hover:bg-indigo-800' 
             : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
         }`}
       >
-        Choose Plan
+        Get This Plan
       </Link>
     </div>
   );
 }
+
+const serviceHighlights = [
+  {
+    title: "Dependability",
+    description: "Consistent staffing and proactive replacement coverage keep your plan on track."
+  },
+  {
+    title: "Continuous Care",
+    description: "Regular follow-ups and coordinator check-ins help families stay informed and supported."
+  },
+  {
+    title: "Flexible Support",
+    description: "From companionship to complex care, plans scale with your loved one’s needs."
+  }
+];

@@ -8,7 +8,7 @@ export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200 shadow-sm md:backdrop-blur-md md:bg-white/80 md:border-white/20 md:shadow-lg">
+    <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-white/90 border-b border-gray-200/80 shadow-sm md:bg-white/80 md:border-white/20 md:shadow-lg">
       <div className="container">
         <div className="flex items-center justify-between py-2.5 sm:py-4">
           <Link href="/" className="flex items-center group">
@@ -18,9 +18,9 @@ export function Header() {
               showText={true} 
               className="group-hover:opacity-80 transition-opacity hidden sm:block text-gray-900" 
             />
-            {/* Mobile logo - icon only */}
+            {/* Mobile logo */}
             <div className="sm:hidden">
-              <Logo width={52} height={52} showText={false} className="group-hover:opacity-80 transition-opacity text-gray-900" />
+              <Logo width={188} height={54} showText={true} className="group-hover:opacity-80 transition-opacity opacity-90 text-gray-900" />
             </div>
           </Link>
           
@@ -66,7 +66,7 @@ export function Header() {
 
         {/* Mobile Navigation Menu */}
         {isMenuOpen && (
-          <div className="lg:hidden border-t border-gray-200 bg-white shadow-md">
+          <div className="lg:hidden border-t border-gray-200 bg-white/95 backdrop-blur-md shadow-md">
             <nav className="py-4 space-y-2">
               {/* Click-to-Call Button */}
               <a
