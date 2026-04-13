@@ -8,48 +8,49 @@ export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-white/90 border-b border-gray-200/80 shadow-sm md:bg-white/80 md:border-white/20 md:shadow-lg">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200">
       <div className="container">
-        <div className="flex items-center justify-between py-2.5 sm:py-4">
+        <div className="flex items-center justify-between py-3 sm:py-4 gap-6">
           <Link href="/" className="flex items-center group">
             <Logo 
               width={220} 
               height={50} 
               showText={true} 
-              className="group-hover:opacity-80 transition-opacity hidden sm:block text-gray-900" 
+              className="group-hover:opacity-80 transition-opacity hidden sm:block text-gray-900"
             />
-            {/* Mobile logo */}
             <div className="sm:hidden">
-              <Logo width={188} height={54} showText={true} className="group-hover:opacity-80 transition-opacity opacity-90 text-gray-900" />
+              <Logo width={188} height={54} showText={true} className="group-hover:opacity-80 transition-opacity text-gray-900" />
             </div>
           </Link>
           
-          <nav className="hidden lg:flex items-center gap-8">
-            <Link href="/services" className="text-gray-700 hover:text-indigo-600 font-semibold transition-colors relative group">
-              Services
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-indigo-600 to-purple-600 group-hover:w-full transition-all duration-300"></span>
+          <div className="hidden lg:flex items-center flex-1 ml-4">
+            <nav className="flex items-center justify-between w-full max-w-5xl">
+              {[
+                { href: "/about", label: "About" },
+                { href: "/service-area", label: "Service Area" },
+                { href: "/services", label: "Services" },
+                { href: "/careers", label: "Careers" },
+                { href: "/blog", label: "Blog" },
+                { href: "/contact", label: "Contact" },
+              ].map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="text-gray-700 hover:text-indigo-700 font-semibold transition-colors uppercase text-xs tracking-wide whitespace-nowrap"
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </nav>
+            <Link href="tel:+14376796446" className="ml-6 bg-indigo-700 text-white px-4 py-2.5 rounded-lg font-semibold hover:bg-indigo-800 transition-colors text-sm whitespace-nowrap shrink-0">
+              Call 437-679-6446
             </Link>
-            <Link href="/about" className="text-gray-700 hover:text-indigo-600 font-semibold transition-colors relative group">
-              About
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-indigo-600 to-purple-600 group-hover:w-full transition-all duration-300"></span>
-            </Link>
-            <Link href="/pricing" className="text-gray-700 hover:text-indigo-600 font-semibold transition-colors relative group">
-              Pricing
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-indigo-600 to-purple-600 group-hover:w-full transition-all duration-300"></span>
-            </Link>
-            <Link href="/faq" className="text-gray-700 hover:text-indigo-600 font-semibold transition-colors relative group">
-              FAQ
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-indigo-600 to-purple-600 group-hover:w-full transition-all duration-300"></span>
-            </Link>
-            <Link href="/contact" className="btn-primary">
-              <span>Contact Us</span>
-            </Link>
-          </nav>
+          </div>
 
           <div className="lg:hidden">
             <button 
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="relative z-50 p-2.5 text-gray-700 hover:text-indigo-600 transition-colors rounded-lg hover:bg-indigo-50 border border-gray-300"
+              className="relative z-50 p-2.5 text-gray-700 hover:text-indigo-700 transition-colors rounded-lg border border-gray-300"
               aria-label="Toggle navigation menu"
               type="button"
             >
@@ -64,53 +65,33 @@ export function Header() {
           </div>
         </div>
 
-        {/* Mobile Navigation Menu */}
         {isMenuOpen && (
-          <div className="lg:hidden border-t border-gray-200 bg-white/95 backdrop-blur-md shadow-md">
-            <nav className="py-4 space-y-2">
-              {/* Click-to-Call Button */}
+          <div className="lg:hidden border-t border-gray-200 bg-white shadow-md">
+            <nav className="py-4 space-y-1">
               <a
                 href="tel:+14376796446"
-                className="block mx-2 mb-4 bg-green-600 text-white px-6 py-4 rounded-xl font-bold text-lg hover:bg-green-700 transition-colors text-center shadow-lg"
+                className="block mx-2 mb-4 bg-indigo-700 text-white px-6 py-4 rounded-xl font-bold text-lg hover:bg-indigo-800 transition-colors text-center"
               >
                 Call (437) 679-6446
               </a>
-              
-              <Link 
-                href="/pricing" 
-                className="block px-4 py-3 text-gray-700 hover:text-indigo-600 hover:bg-indigo-50 transition-colors rounded-lg mx-2"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Pricing
-              </Link>
-              <Link 
-                href="/services" 
-                className="block px-4 py-3 text-gray-700 hover:text-indigo-600 hover:bg-indigo-50 transition-colors rounded-lg mx-2"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Services
-              </Link>
-              <Link 
-                href="/faq" 
-                className="block px-4 py-3 text-gray-700 hover:text-indigo-600 hover:bg-indigo-50 transition-colors rounded-lg mx-2"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                FAQ
-              </Link>
-              <Link 
-                href="/about" 
-                className="block px-4 py-3 text-gray-700 hover:text-indigo-600 hover:bg-indigo-50 transition-colors rounded-lg mx-2"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                About
-              </Link>
-              <Link 
-                href="/contact" 
-                className="block mx-2 mt-4 bg-indigo-600 text-white px-4 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors text-center"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Contact Form
-              </Link>
+              {[
+                { href: "/", label: "Home" },
+                { href: "/about", label: "About" },
+                { href: "/service-area", label: "Service Area" },
+                { href: "/services", label: "Services" },
+                { href: "/careers", label: "Careers" },
+                { href: "/blog", label: "Blog" },
+                { href: "/contact", label: "Contact" },
+              ].map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="block px-4 py-3 text-gray-700 hover:text-indigo-700 hover:bg-indigo-50 transition-colors rounded-lg mx-2"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              ))}
             </nav>
           </div>
         )}

@@ -2,19 +2,27 @@ import Link from "next/link";
 
 export default function ServicesPage() {
   return (
-    <div className="min-h-screen pt-20">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-indigo-700 to-indigo-900 text-white">
-        <div className="max-w-6xl mx-auto px-6 py-20">
+    <div className="min-h-screen pt-20 bg-white">
+      <section className="relative overflow-hidden border-b border-gray-200 text-white">
+        <div className="absolute inset-0">
+          <img
+            src="/images/services-hero.jpg"
+            alt="In-home elderly care support"
+            className="h-full w-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gray-900/35" />
+        </div>
+        <div className="relative max-w-6xl mx-auto px-6 py-20">
           <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+            <p className="section-kicker mb-3">Home Care Services</p>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white uppercase">
               Comprehensive Elderly Care Services
             </h1>
-            <p className="text-xl md:text-2xl text-indigo-100 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-gray-100 mb-8 max-w-3xl mx-auto">
               Professional, compassionate care tailored to your loved one&apos;s unique needs. 
               Available 24/7 across the Greater Toronto Area.
             </p>
-            <Link href="/contact" className="inline-block bg-white text-indigo-700 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+            <Link href="/contact" className="inline-block bg-indigo-700 text-white px-8 py-4 rounded-lg font-semibold hover:bg-indigo-800 transition-colors">
               Get Free Consultation
             </Link>
           </div>
@@ -26,11 +34,11 @@ export default function ServicesPage() {
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="inline-flex items-center gap-2 bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium mb-4">
-                <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+              <div className="inline-flex items-center gap-2 bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full text-sm font-medium mb-4 uppercase tracking-wide">
+                <span className="w-2 h-2 bg-indigo-600 rounded-full"></span>
                 Featured Service
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 uppercase">
                 Mental Health & Emotional Support
               </h2>
               <p className="text-lg text-gray-600 mb-6">
@@ -40,32 +48,32 @@ export default function ServicesPage() {
               </p>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-start gap-3">
-                  <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <svg className="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                  <div className="w-6 h-6 bg-indigo-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <svg className="w-4 h-4 text-indigo-600" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
                   </div>
                   <span className="text-gray-700"><strong>24/7 Mental Health Helpline</strong> - Crisis support and emotional guidance</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <svg className="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                  <div className="w-6 h-6 bg-indigo-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <svg className="w-4 h-4 text-indigo-600" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
                   </div>
                   <span className="text-gray-700"><strong>Regular Wellness Calls</strong> - Scheduled check-ins to combat isolation</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <svg className="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                  <div className="w-6 h-6 bg-indigo-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <svg className="w-4 h-4 text-indigo-600" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
                   </div>
                   <span className="text-gray-700"><strong>Grief & Loss Counseling</strong> - Professional support during difficult times</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <svg className="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                  <div className="w-6 h-6 bg-indigo-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <svg className="w-4 h-4 text-indigo-600" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
                   </div>
@@ -81,17 +89,17 @@ export default function ServicesPage() {
                 </Link>
               </div>
             </div>
-            <div className="bg-gradient-to-br from-green-50 to-blue-50 rounded-2xl p-8">
+            <div className="bg-gray-50 rounded-2xl p-8 border border-gray-200">
               <div className="text-center">
-                <div className="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                <div className="w-20 h-20 bg-indigo-700 rounded-full flex items-center justify-center mx-auto mb-6">
                   <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                   </svg>
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Available 24/7</h3>
                 <p className="text-gray-600 mb-6">Our mental health support line is always available when you need someone to talk to.</p>
-                <div className="bg-white rounded-lg p-4 shadow-sm">
-                  <p className="text-2xl font-bold text-green-600">(437) 679-6446</p>
+                <div className="bg-white rounded-lg p-4 shadow-sm border border-gray-200">
+                  <p className="text-2xl font-bold text-indigo-700">(437) 679-6446</p>
                   <p className="text-sm text-gray-500">24/7 Mental Health Helpline</p>
                 </div>
               </div>
@@ -122,20 +130,21 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-indigo-700">
+      <section className="py-16 bg-gray-900">
         <div className="max-w-6xl mx-auto px-6 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <p className="section-kicker mb-3 text-indigo-300">Need Care Fast?</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 uppercase">
             Ready to Get Started?
           </h2>
-          <p className="text-xl text-indigo-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Contact us today for a free consultation and personalized care plan 
             tailored to your loved one&apos;s specific needs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="bg-white text-indigo-700 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+            <Link href="/contact" className="bg-indigo-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-indigo-700 transition-colors">
               Free Consultation
             </Link>
-            <Link href="tel:+14376796446" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-700 transition-colors">
+            <Link href="tel:+14376796446" className="border-2 border-gray-300 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-colors">
               Call (437) 679-6446
             </Link>
           </div>

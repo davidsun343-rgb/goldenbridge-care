@@ -67,7 +67,7 @@ export default function Logo({ className = "", width = 200, height = 60, showTex
               fill="currentColor"
               fontFamily="Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
             >
-              Elderly Services
+              Elderly Care Services
             </text>
           </g>
         )}

@@ -1,9 +1,10 @@
 export default function PrivacyPage() {
   return (
-    <div className="min-h-screen pt-20">
-      <section className="py-16 bg-white">
+    <div className="min-h-screen pt-20 bg-white">
+      <section className="py-16 bg-white border-b border-gray-200">
         <div className="max-w-4xl mx-auto px-6">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Privacy Policy</h1>
+          <p className="section-kicker mb-3">Legal</p>
+          <h1 className="text-4xl font-bold text-gray-900 mb-8 uppercase">Privacy Policy</h1>
           <div className="prose prose-lg text-gray-700">
             <p className="text-sm text-gray-500 mb-8">Last updated: October 17, 2025</p>
             
@@ -70,7 +71,7 @@ export default function PrivacyPage() {
 
             <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Contact Us</h2>
             <p>If you have questions about this Privacy Policy, please contact us:</p>
-            <div className="bg-gray-50 p-6 rounded-lg mt-4">
+            <div className="bg-gray-50 p-6 rounded-lg mt-4 border border-gray-200">
               <p><strong>Email:</strong> privacy@goldenbridgecare.com</p>
               <p><strong>Phone:</strong> (437) 679-6446</p>
               <p><strong>Mail:</strong> 123 Care Street, Toronto, ON M5V 3A8</p>

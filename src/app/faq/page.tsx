@@ -165,43 +165,41 @@ export default function FAQPage() {
   };
 
   return (
-    <div className="min-h-screen pt-20">
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-indigo-900 via-indigo-700 to-blue-600 text-white overflow-hidden">
-        {/* Background Pattern */}
+    <div className="min-h-screen pt-20 bg-white">
+      <section className="relative bg-white border-b border-gray-200 overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{
-            backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)',
+            backgroundImage: 'radial-gradient(circle at 2px 2px, #4f46e5 1px, transparent 0)',
             backgroundSize: '40px 40px'
           }}></div>
         </div>
         
         <div className="relative max-w-6xl mx-auto px-6 py-24">
           <div className="text-center">
-            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full mb-6 border border-white/20">
-              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+            <div className="inline-flex items-center gap-2 bg-indigo-100 px-4 py-2 rounded-full mb-6 border border-indigo-200">
+              <svg className="w-4 h-4 text-indigo-700" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clipRule="evenodd" />
               </svg>
-              <span className="text-sm font-medium">Got Questions? We Have Answers</span>
+              <span className="text-sm font-medium text-indigo-700 uppercase tracking-wide">Got Questions? We Have Answers</span>
             </div>
             
-            <h1 className="text-5xl md:text-6xl font-extrabold mb-6 leading-tight">
-              Frequently Asked <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-cyan-200">Questions</span>
+            <h1 className="text-5xl md:text-6xl font-extrabold mb-6 leading-tight text-gray-900 uppercase">
+              Frequently Asked Questions
             </h1>
-            <p className="text-xl md:text-2xl text-indigo-100 mb-10 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl md:text-2xl text-gray-600 mb-10 max-w-3xl mx-auto leading-relaxed">
               Everything you need to know about our elderly care services. 
               Clear answers to help you make the best decision for your loved one.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 href="/contact" 
-                className="bg-white text-indigo-700 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all hover:shadow-xl hover:scale-105 transform"
+                className="bg-indigo-700 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-indigo-800 transition-all"
               >
                 Ask Your Question
               </Link>
               <a 
                 href="tel:+14376796446" 
-                className="border-2 border-white/80 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-indigo-700 transition-all hover:shadow-xl backdrop-blur-sm"
+                className="border-2 border-indigo-700 text-indigo-700 px-8 py-4 rounded-xl font-bold text-lg hover:bg-indigo-50 transition-all"
               >
                 📞 Call (437) 679-6446
               </a>
@@ -211,18 +209,18 @@ export default function FAQPage() {
       </section>
 
       {/* Quick Stats */}
-      <section className="py-16 bg-gradient-to-br from-gray-50 to-blue-50 border-b border-gray-200">
+      <section className="py-16 bg-gray-50 border-b border-gray-200">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid md:grid-cols-4 gap-6">
-            <div className="bg-white p-6 rounded-2xl shadow-md border border-gray-100 text-center hover:shadow-xl transition-shadow">
-              <div className="w-16 h-16 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+            <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-200 text-center">
+              <div className="w-16 h-16 bg-indigo-700 rounded-2xl flex items-center justify-center mx-auto mb-4">
                 <span className="text-3xl font-bold text-white">15+</span>
               </div>
               <div className="text-sm font-semibold text-gray-900 mb-1">Years of</div>
               <div className="text-gray-600 font-medium">Experience</div>
             </div>
-            <div className="bg-white p-6 rounded-2xl shadow-md border border-gray-100 text-center hover:shadow-xl transition-shadow">
-              <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+            <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-200 text-center">
+              <div className="w-16 h-16 bg-indigo-700 rounded-2xl flex items-center justify-center mx-auto mb-4">
                 <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
                 </svg>
@@ -230,8 +228,8 @@ export default function FAQPage() {
               <div className="text-sm font-semibold text-gray-900 mb-1">Available</div>
               <div className="text-gray-600 font-medium">24/7/365</div>
             </div>
-            <div className="bg-white p-6 rounded-2xl shadow-md border border-gray-100 text-center hover:shadow-xl transition-shadow">
-              <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+            <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-200 text-center">
+              <div className="w-16 h-16 bg-indigo-700 rounded-2xl flex items-center justify-center mx-auto mb-4">
                 <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
@@ -239,8 +237,8 @@ export default function FAQPage() {
               <div className="text-sm font-semibold text-gray-900 mb-1">100%</div>
               <div className="text-gray-600 font-medium">Certified Team</div>
             </div>
-            <div className="bg-white p-6 rounded-2xl shadow-md border border-gray-100 text-center hover:shadow-xl transition-shadow">
-              <div className="w-16 h-16 bg-gradient-to-br from-amber-500 to-orange-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+            <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-200 text-center">
+              <div className="w-16 h-16 bg-indigo-700 rounded-2xl flex items-center justify-center mx-auto mb-4">
                 <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
                 </svg>
@@ -253,7 +251,7 @@ export default function FAQPage() {
       </section>
 
       {/* FAQ Accordion */}
-      <section className="py-20 bg-gradient-to-b from-white to-gray-50">
+      <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -313,7 +311,7 @@ export default function FAQPage() {
                   </div>
                 </button>
                 {openIndex === index && (
-                  <div className="px-8 pb-6 pt-2 bg-gradient-to-br from-gray-50 to-indigo-50/30">
+                  <div className="px-8 pb-6 pt-2 bg-gray-50">
                     <div className="border-l-4 border-indigo-600 pl-6 py-2">
                       <p className="text-gray-700 leading-relaxed text-lg">{faq.answer}</p>
                     </div>
@@ -326,25 +324,20 @@ export default function FAQPage() {
       </section>
 
       {/* Still Have Questions CTA */}
-      <section className="relative py-20 bg-gradient-to-br from-indigo-900 via-indigo-700 to-blue-600 text-white overflow-hidden">
-        {/* Background Elements */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 left-0 w-96 h-96 bg-blue-500 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-500 rounded-full blur-3xl"></div>
-        </div>
+      <section className="relative py-20 bg-gray-900 text-white overflow-hidden">
         
         <div className="relative max-w-4xl mx-auto px-6 text-center">
-          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full mb-6 border border-white/20">
+          <div className="inline-flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full mb-6 border border-white/20">
             <svg className="w-5 h-5 text-yellow-300" fill="currentColor" viewBox="0 0 20 20">
               <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z" />
             </svg>
             <span className="text-sm font-medium">We&apos;re Here to Help</span>
           </div>
           
-          <h2 className="text-4xl md:text-5xl font-extrabold mb-6">
+          <h2 className="text-4xl md:text-5xl font-extrabold mb-6 uppercase">
             Still Have Questions?
           </h2>
-          <p className="text-xl md:text-2xl text-indigo-100 mb-10 leading-relaxed">
+          <p className="text-xl md:text-2xl text-gray-300 mb-10 leading-relaxed">
             We&apos;re here to help! Get in touch with our care coordinators for personalized answers 
             and expert guidance tailored to your specific situation.
           </p>
@@ -352,7 +345,7 @@ export default function FAQPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <Link
               href="/contact"
-              className="bg-white text-indigo-700 px-10 py-5 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all hover:shadow-2xl hover:scale-105 transform inline-flex items-center justify-center gap-2"
+              className="bg-indigo-600 text-white px-10 py-5 rounded-xl font-bold text-lg hover:bg-indigo-700 transition-all inline-flex items-center justify-center gap-2"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
@@ -361,7 +354,7 @@ export default function FAQPage() {
             </Link>
             <a
               href="tel:+14376796446"
-              className="border-2 border-white/80 text-white px-10 py-5 rounded-xl font-bold text-lg hover:bg-white hover:text-indigo-700 transition-all hover:shadow-2xl backdrop-blur-sm inline-flex items-center justify-center gap-2"
+              className="border-2 border-gray-300 text-white px-10 py-5 rounded-xl font-bold text-lg hover:bg-white hover:text-gray-900 transition-all inline-flex items-center justify-center gap-2"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -370,17 +363,16 @@ export default function FAQPage() {
             </a>
           </div>
           
-          <div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full border border-white/20">
+          <div className="inline-flex items-center gap-3 bg-white/10 px-6 py-3 rounded-full border border-white/20">
             <svg className="w-5 h-5 text-green-300" fill="currentColor" viewBox="0 0 20 20">
               <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
             </svg>
-            <span className="text-indigo-100 font-medium">Available Monday - Friday, 9 AM - 6 PM</span>
+            <span className="text-gray-200 font-medium">Available Monday - Friday, 9 AM - 6 PM</span>
           </div>
         </div>
       </section>
 
-      {/* Helpful Resources */}
-      <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
+      <section className="py-20 bg-gray-50">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">

@@ -2,9 +2,9 @@ import Link from 'next/link';
 
 export default function ThankYouPage() {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
+    <main className="min-h-screen bg-white pt-20">
       <div className="max-w-4xl mx-auto px-6 py-20">
-        <div className="bg-white rounded-2xl shadow-lg border p-12 text-center">
+        <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-12 text-center">
           {/* Success Icon */}
           <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
             <svg className="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -13,14 +13,15 @@ export default function ThankYouPage() {
           </div>
 
           {/* Thank You Message */}
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">Thank You!</h1>
+          <p className="section-kicker mb-3">Request Received</p>
+          <h1 className="text-4xl font-bold text-gray-900 mb-4 uppercase">Thank You!</h1>
           <p className="text-xl text-gray-600 mb-8">
             Your consultation request has been submitted successfully.
           </p>
 
           {/* What Happens Next Section */}
-          <div className="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-8 text-left">
-            <h2 className="text-xl font-semibold text-gray-900 mb-4 text-center">What Happens Next?</h2>
+          <div className="bg-gray-50 border border-gray-200 rounded-xl p-6 mb-8 text-left">
+            <h2 className="text-xl font-semibold text-gray-900 mb-4 text-center uppercase">What Happens Next?</h2>
             <div className="space-y-4">
               <div className="flex items-start gap-3">
                 <div className="w-8 h-8 bg-indigo-700 text-white rounded-full flex items-center justify-center flex-shrink-0 font-semibold">
@@ -62,7 +63,7 @@ export default function ThankYouPage() {
           </div>
 
           {/* Contact Information */}
-          <div className="bg-gradient-to-r from-indigo-50 to-blue-50 rounded-xl p-6 mb-8">
+          <div className="bg-gray-100 rounded-xl p-6 mb-8 border border-gray-200">
             <h3 className="font-semibold text-gray-900 mb-3">Need Immediate Assistance?</h3>
             <p className="text-gray-600 mb-4">If you have urgent care needs, please call us directly:</p>
             <a
