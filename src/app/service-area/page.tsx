@@ -68,55 +68,30 @@ export default function ServiceAreaPage() {
         </div>
       </section>
 
-      <section className="py-20 px-6 bg-white">
-        <div className="max-w-6xl mx-auto grid lg:grid-cols-[1.2fr_1fr] gap-12 items-center">
-          <div>
-            <p className="section-kicker mb-3">Why Families Choose Us</p>
-            <h2 className="section-title mb-5">Care That Fits Real Life In The GTA</h2>
-            <div className="text-gray-600 leading-relaxed space-y-4 max-w-3xl">
-              <p>
-                The GTA is fast-paced and diverse. Families are balancing work, caregiving, and daily life, and it can feel overwhelming. Our team steps in with practical, reliable support that makes home life easier and safer.
-              </p>
-              <p>
-                We provide both skilled and non-medical care, with flexible plans built around your schedule, routines, and health needs. Whether support is needed a few hours a week or every day, we tailor care so it feels consistent and personal.
-              </p>
+      <section className="py-20 px-6 bg-gray-50 border-y border-gray-200">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid lg:grid-cols-[1.2fr_1fr] gap-10 items-center">
+            <div>
+              <p className="section-kicker mb-3">Why Families Choose Us</p>
+              <h2 className="section-title mb-5">Care That Fits Real Life In The GTA</h2>
+              <div className="text-gray-600 leading-relaxed space-y-4">
+                <p>
+                  The GTA is fast-paced and diverse. Families are balancing work, caregiving, and daily life, and it can feel overwhelming. Our team steps in with practical, reliable support that makes home life easier and safer.
+                </p>
+                <p>
+                  We provide both skilled and non-medical care, with flexible plans built around your schedule, routines, and health needs. Whether support is needed a few hours a week or every day, we tailor care so it feels consistent and personal.
+                </p>
+                <p>
+                  Communication is a major part of quality home care, and our multilingual team helps families feel truly supported. <strong className="text-gray-900">Language capabilities: Hindi, Mandarin, Farsi, French</strong> and more based on caregiver availability.
+                </p>
+              </div>
             </div>
-          </div>
-          <div className="relative">
-            <div className="absolute -inset-4 rounded-3xl bg-indigo-100/70" />
-            <div className="relative overflow-hidden rounded-2xl border border-gray-200 shadow-sm">
+            <div className="rounded-2xl overflow-hidden border border-gray-200 shadow-sm bg-white">
               <img
-                src={skylineImage}
-                alt="Downtown Toronto skyline"
-                className="h-80 w-full object-cover"
+                src="/images/gta-care-section.png"
+                alt="Care support in GTA"
+                className="w-full h-[360px] object-cover"
               />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-gray-50 border-y border-gray-200 py-16 px-6">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
-          <div>
-            <p className="section-kicker mb-3">Multilingual Support</p>
-            <h2 className="section-title mb-5">Care In The Language You’re Comfortable With</h2>
-            <p className="text-gray-600 leading-relaxed mb-5">
-              Communication matters in home care. We have PSWs who speak Hindi, Mandarin, Farsi, French, and other languages so clients and families can feel understood and confident with their care team.
-            </p>
-            <p className="text-gray-600 leading-relaxed">
-              This helps build trust faster, reduces stress, and keeps everyone on the same page.
-            </p>
-          </div>
-          <div className="relative overflow-hidden rounded-2xl min-h-[320px]">
-            <img
-              src={skylineImage}
-              alt="Toronto skyline at dusk"
-              className="absolute inset-0 h-full w-full object-cover"
-            />
-            <div className="relative h-full p-8 flex flex-col justify-center text-white">
-              <p className="text-sm uppercase tracking-[0.2em] text-indigo-200 mb-3">Languages</p>
-              <p className="text-2xl font-bold mb-4">Hindi • Mandarin • Farsi • French</p>
-              <p className="text-indigo-100">And more based on caregiver availability in your area.</p>
             </div>
           </div>
         </div>
