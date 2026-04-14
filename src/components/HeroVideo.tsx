@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
 type HeroVideoProps = {
@@ -10,7 +11,7 @@ type HeroVideoProps = {
 
 export function HeroVideo({ src, poster, className }: HeroVideoProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
-  const [canPlay, setCanPlay] = useState(false);
+  const [showFallback, setShowFallback] = useState(false);
 
   useEffect(() => {
     const video = videoRef.current;
@@ -19,8 +20,9 @@ export function HeroVideo({ src, poster, className }: HeroVideoProps) {
     const tryPlay = async () => {
       try {
         await video.play();
+        setShowFallback(false);
       } catch {
-        setCanPlay(false);
+        setShowFallback(true);
       }
     };
 
@@ -40,24 +42,29 @@ export function HeroVideo({ src, poster, className }: HeroVideoProps) {
 
   return (
     <div className={className}>
-      <img
-        src={poster}
-        alt=""
-        aria-hidden="true"
-        className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-500 ${canPlay ? "opacity-0" : "opacity-100"}`}
-      />
+      {showFallback && (
+        <Image
+          src={poster}
+          alt=""
+          aria-hidden="true"
+          fill
+          sizes="100vw"
+          className="absolute inset-0 h-full w-full object-cover"
+          priority
+        />
+      )}
 
       <video
         ref={videoRef}
-        className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-500 ${canPlay ? "opacity-100" : "opacity-0"}`}
+        className="absolute inset-0 h-full w-full object-cover"
         autoPlay
         muted
         loop
         playsInline
         preload="auto"
         poster={poster}
-        onCanPlay={() => setCanPlay(true)}
-        onLoadedData={() => setCanPlay(true)}
+        onCanPlay={() => setShowFallback(false)}
+        onLoadedData={() => setShowFallback(false)}
       >
         <source src={src} type="video/mp4" />
       </video>
