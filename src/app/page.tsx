@@ -1,22 +1,16 @@
 import Link from "next/link";
+import { HeroVideo } from "../components/HeroVideo";
 
 export default function Home() {
   return (
     <div className="pt-20 bg-white">
       <section className="relative min-h-[82vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          {/* Drop your video file in public/videos/hero-bg.mp4 */}
-          <video
-            className="absolute inset-0 h-full w-full object-cover"
-            autoPlay
-            muted
-            loop
-            playsInline
+          <HeroVideo
+            src="/videos/hero.mp4"
             poster="/images/nursing-care-costs-scaled-1-1024x682.jpg"
-          >
-            <source src="/videos/hero.mp4" type="video/mp4" />
-            {/* Falls back to the poster image if video isn't loaded yet */}
-          </video>
+            className="absolute inset-0"
+          />
           <div className="absolute inset-0 bg-black/45" />
         </div>
         <div className="relative max-w-6xl mx-auto px-6 py-20 text-white">
