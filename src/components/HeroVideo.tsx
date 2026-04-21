@@ -17,12 +17,16 @@ export function HeroVideo({ src, poster, className }: HeroVideoProps) {
     const video = videoRef.current;
     if (!video) return;
 
+    video.muted = true;
+    video.defaultMuted = true;
+    video.setAttribute("muted", "");
+    video.setAttribute("playsinline", "");
+
     const tryPlay = async () => {
       try {
         await video.play();
-        setShowFallback(false);
       } catch {
-        setShowFallback(true);
+        return;
       }
     };
 
@@ -34,9 +38,34 @@ export function HeroVideo({ src, poster, className }: HeroVideoProps) {
       }
     };
 
+    const onPageShow = () => {
+      void tryPlay();
+    };
+
+    const onUserGesture = () => {
+      void tryPlay();
+    };
+
+    const onCanPlay = () => {
+      void tryPlay();
+    };
+
     document.addEventListener("visibilitychange", onVisibility);
+    window.addEventListener("pageshow", onPageShow);
+    window.addEventListener("touchstart", onUserGesture, { passive: true });
+    window.addEventListener("scroll", onUserGesture, { passive: true });
+    window.addEventListener("click", onUserGesture);
+    window.addEventListener("keydown", onUserGesture);
+    video.addEventListener("canplay", onCanPlay);
+
     return () => {
       document.removeEventListener("visibilitychange", onVisibility);
+      window.removeEventListener("pageshow", onPageShow);
+      window.removeEventListener("touchstart", onUserGesture);
+      window.removeEventListener("scroll", onUserGesture);
+      window.removeEventListener("click", onUserGesture);
+      window.removeEventListener("keydown", onUserGesture);
+      video.removeEventListener("canplay", onCanPlay);
     };
   }, []);
 
@@ -62,9 +91,7 @@ export function HeroVideo({ src, poster, className }: HeroVideoProps) {
         loop
         playsInline
         preload="auto"
-        poster={poster}
-        onCanPlay={() => setShowFallback(false)}
-        onLoadedData={() => setShowFallback(false)}
+        onError={() => setShowFallback(true)}
       >
         <source src={src} type="video/mp4" />
       </video>
