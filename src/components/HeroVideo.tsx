@@ -12,6 +12,7 @@ type HeroVideoProps = {
 export function HeroVideo({ src, poster, className }: HeroVideoProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [showFallback, setShowFallback] = useState(false);
+  const [hasStarted, setHasStarted] = useState(false);
 
   useEffect(() => {
     const video = videoRef.current;
@@ -50,6 +51,13 @@ export function HeroVideo({ src, poster, className }: HeroVideoProps) {
       void tryPlay();
     };
 
+    const onLoadedMetadata = () => {
+      if (video.currentTime < 0.05) {
+        video.currentTime = 0.05;
+      }
+      void tryPlay();
+    };
+
     document.addEventListener("visibilitychange", onVisibility);
     window.addEventListener("pageshow", onPageShow);
     window.addEventListener("touchstart", onUserGesture, { passive: true });
@@ -57,6 +65,7 @@ export function HeroVideo({ src, poster, className }: HeroVideoProps) {
     window.addEventListener("click", onUserGesture);
     window.addEventListener("keydown", onUserGesture);
     video.addEventListener("canplay", onCanPlay);
+    video.addEventListener("loadedmetadata", onLoadedMetadata);
 
     return () => {
       document.removeEventListener("visibilitychange", onVisibility);
@@ -66,6 +75,7 @@ export function HeroVideo({ src, poster, className }: HeroVideoProps) {
       window.removeEventListener("click", onUserGesture);
       window.removeEventListener("keydown", onUserGesture);
       video.removeEventListener("canplay", onCanPlay);
+      video.removeEventListener("loadedmetadata", onLoadedMetadata);
     };
   }, []);
 
@@ -85,12 +95,13 @@ export function HeroVideo({ src, poster, className }: HeroVideoProps) {
 
       <video
         ref={videoRef}
-        className="absolute inset-0 h-full w-full object-cover"
+        className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-300 ${hasStarted ? "opacity-100" : "opacity-0"}`}
         autoPlay
         muted
         loop
         playsInline
         preload="auto"
+        onPlaying={() => setHasStarted(true)}
         onError={() => setShowFallback(true)}
       >
         <source src={src} type="video/mp4" />
