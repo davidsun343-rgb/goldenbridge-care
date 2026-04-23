@@ -1,22 +1,12 @@
 import Link from "next/link";
+import { HeroVideoStrict } from "../components/HeroVideoStrict";
 
 export default function Home() {
   return (
     <div className="pt-20 bg-white">
       <section className="relative min-h-[82vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gray-900" />
-          <video
-            key="hero-video-v3"
-            className="absolute inset-0 h-full w-full object-cover"
-            autoPlay
-            muted
-            loop
-            playsInline
-            preload="metadata"
-          >
-            <source src="/videos/hero.mp4?v=3#t=1.0" type="video/mp4" />
-          </video>
+          <HeroVideoStrict src="/videos/hero.mp4?v=4" className="absolute inset-0" startAt={1.0} />
           <div className="absolute inset-0 bg-black/45" />
         </div>
         <div className="relative max-w-6xl mx-auto px-6 py-20 text-white">
