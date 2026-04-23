@@ -8,7 +8,6 @@ export default function Home() {
         <div className="absolute inset-0">
           <HeroVideo
             src="/videos/hero.mp4"
-            poster="/images/nursing-care-costs-scaled-1-1024x682.jpg"
             className="absolute inset-0"
           />
           <div className="absolute inset-0 bg-black/45" />

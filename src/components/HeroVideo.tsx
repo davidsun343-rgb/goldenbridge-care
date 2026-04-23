@@ -4,22 +4,35 @@ import { useEffect, useRef, useState } from "react";
 
 type HeroVideoProps = {
   src: string;
-  poster: string;
   className?: string;
 };
 
-export function HeroVideo({ src, poster, className }: HeroVideoProps) {
+export function HeroVideo({ src, className }: HeroVideoProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [showFallback, setShowFallback] = useState(false);
+  const [isReady, setIsReady] = useState(false);
 
   useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
+    const START_AT_SECONDS = 1.0;
 
     video.muted = true;
     video.defaultMuted = true;
     video.setAttribute("muted", "");
     video.setAttribute("playsinline", "");
+    video.preload = "auto";
+
+    const seekToStart = () => {
+      const safeStart = Math.min(
+        START_AT_SECONDS,
+        Math.max(0, (video.duration || START_AT_SECONDS) - 0.1)
+      );
+
+      if (video.currentTime < safeStart) {
+        video.currentTime = safeStart;
+      }
+    };
 
     const tryPlay = async () => {
       try {
@@ -51,6 +64,23 @@ export function HeroVideo({ src, poster, className }: HeroVideoProps) {
     };
 
     const onLoadedData = () => {
+      seekToStart();
+      void tryPlay();
+    };
+
+    const onLoadedMetadata = () => {
+      seekToStart();
+      void tryPlay();
+    };
+
+    const onTimeUpdate = () => {
+      if (video.currentTime >= START_AT_SECONDS + 0.05 && !video.paused) {
+        setIsReady(true);
+      }
+    };
+
+    const onEnded = () => {
+      seekToStart();
       void tryPlay();
     };
 
@@ -62,6 +92,9 @@ export function HeroVideo({ src, poster, className }: HeroVideoProps) {
     window.addEventListener("keydown", onUserGesture);
     video.addEventListener("canplay", onCanPlay);
     video.addEventListener("loadeddata", onLoadedData);
+    video.addEventListener("loadedmetadata", onLoadedMetadata);
+    video.addEventListener("timeupdate", onTimeUpdate);
+    video.addEventListener("ended", onEnded);
 
     return () => {
       document.removeEventListener("visibilitychange", onVisibility);
@@ -72,6 +105,9 @@ export function HeroVideo({ src, poster, className }: HeroVideoProps) {
       window.removeEventListener("keydown", onUserGesture);
       video.removeEventListener("canplay", onCanPlay);
       video.removeEventListener("loadeddata", onLoadedData);
+      video.removeEventListener("loadedmetadata", onLoadedMetadata);
+      video.removeEventListener("timeupdate", onTimeUpdate);
+      video.removeEventListener("ended", onEnded);
     };
   }, []);
 
@@ -85,13 +121,13 @@ export function HeroVideo({ src, poster, className }: HeroVideoProps) {
 
       <video
         ref={videoRef}
-        className="absolute inset-0 h-full w-full object-cover"
+        className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-200 ${isReady ? "opacity-100" : "opacity-0"}`}
         autoPlay
         muted
-        loop
+        loop={false}
         playsInline
         preload="auto"
-        poster={poster}
+        poster=""
         onPlaying={() => setShowFallback(false)}
         onError={() => setShowFallback(true)}
       >
