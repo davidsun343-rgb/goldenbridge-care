@@ -6,6 +6,8 @@ export const metadata: Metadata = {
   description: "Learn about GoldenBridge Care and our mission to provide compassionate, professional elderly home care across the Greater Toronto Area.",
 };
 
+export const revalidate = 0;
+
 export default function AboutPage() {
   return (
     <div className="min-h-screen pt-20 bg-white">

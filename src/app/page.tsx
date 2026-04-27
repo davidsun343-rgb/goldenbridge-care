@@ -2,12 +2,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { HeroVideoStrict } from "../components/HeroVideoStrict";
 
+export const revalidate = 0;
+
 export default function Home() {
   return (
     <div className="pt-20 bg-white">
       <section className="relative min-h-[82vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <HeroVideoStrict src="/videos/hero.mp4?v=6" className="absolute inset-0" />
+          <HeroVideoStrict src="/videos/hero.mp4?v=7" className="absolute inset-0" />
           <div className="absolute inset-0 bg-black/40" style={{ zIndex: 1 }} />
         </div>
         <div className="relative z-10 max-w-6xl mx-auto px-6 py-20 text-white">
