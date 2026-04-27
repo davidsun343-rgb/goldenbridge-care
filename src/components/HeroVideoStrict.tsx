@@ -63,12 +63,6 @@ export function HeroVideoStrict({ src, className, startAt = 1.0 }: HeroVideoStri
       }
     };
 
-    const onEnded = () => {
-      setIsReady(false);
-      seekToStart();
-      void tryPlay();
-    };
-
     const onVisibility = () => {
       if (document.visibilityState === "visible") {
         void tryPlay();
@@ -83,7 +77,6 @@ export function HeroVideoStrict({ src, className, startAt = 1.0 }: HeroVideoStri
     video.addEventListener("loadeddata", onLoadedData);
     video.addEventListener("timeupdate", onTimeUpdate);
     video.addEventListener("playing", onPlaying);
-    video.addEventListener("ended", onEnded);
     document.addEventListener("visibilitychange", onVisibility);
     window.addEventListener("pageshow", onUserGesture);
     window.addEventListener("touchstart", onUserGesture, { passive: true });
@@ -97,7 +90,6 @@ export function HeroVideoStrict({ src, className, startAt = 1.0 }: HeroVideoStri
       video.removeEventListener("loadeddata", onLoadedData);
       video.removeEventListener("timeupdate", onTimeUpdate);
       video.removeEventListener("playing", onPlaying);
-      video.removeEventListener("ended", onEnded);
       document.removeEventListener("visibilitychange", onVisibility);
       window.removeEventListener("pageshow", onUserGesture);
       window.removeEventListener("touchstart", onUserGesture);
@@ -108,20 +100,29 @@ export function HeroVideoStrict({ src, className, startAt = 1.0 }: HeroVideoStri
 
   return (
     <div className={className}>
-      <div className="absolute inset-0 bg-gray-900" />
-      {hasError && <div className="absolute inset-0 bg-gradient-to-br from-gray-900 to-gray-800" />}
+      {/* Video always rendered at full opacity — overlay covers it until ready */}
       <video
         ref={videoRef}
-        className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-200 ${isReady ? "opacity-100" : "opacity-0"}`}
+        className="absolute inset-0 h-full w-full object-cover"
         autoPlay
         muted
-        loop={false}
+        loop
         playsInline
         preload="auto"
         onError={() => setHasError(true)}
       >
         <source src={src} type="video/mp4" />
       </video>
+
+      {/* Dark overlay sits ON TOP of the video and fades away once playback is confirmed */}
+      <div
+        className={`absolute inset-0 bg-gray-900 transition-opacity duration-300 pointer-events-none ${isReady ? "opacity-0" : "opacity-100"}`}
+        style={{ zIndex: 1 }}
+      />
+
+      {hasError && (
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-900 to-gray-800" style={{ zIndex: 2 }} />
+      )}
     </div>
   );
 }
