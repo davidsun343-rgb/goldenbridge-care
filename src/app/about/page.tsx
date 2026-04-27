@@ -1,12 +1,18 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "About GoldenBridge Care | Compassionate Home Care in the GTA",
+  description: "Learn about GoldenBridge Care and our mission to provide compassionate, professional elderly home care across the Greater Toronto Area.",
+};
 
 export default function AboutPage() {
   return (
     <div className="min-h-screen pt-20 bg-white">
-      <section className="bg-white border-b border-gray-200">
+      <section className="bg-indigo-50 border-b border-indigo-100">
         <div className="max-w-6xl mx-auto px-6 py-20">
           <div className="text-center">
-            <p className="section-kicker mb-3">Who We Are</p>
+            <p className="section-kicker mb-3 text-indigo-700">Who We Are</p>
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900 uppercase">
               About GoldenBridge Care
             </h1>

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { HeroVideoStrict } from "../components/HeroVideoStrict";
 
@@ -7,9 +8,9 @@ export default function Home() {
       <section className="relative min-h-[82vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <HeroVideoStrict src="/videos/hero.mp4?v=6" className="absolute inset-0" />
-          <div className="absolute inset-0 bg-black/45" style={{ zIndex: 2 }} />
+          <div className="absolute inset-0 bg-black/40" style={{ zIndex: 1 }} />
         </div>
-        <div className="relative max-w-6xl mx-auto px-6 py-20 text-white">
+        <div className="relative z-10 max-w-6xl mx-auto px-6 py-20 text-white">
           <p className="text-sm font-semibold uppercase tracking-[0.22em] text-indigo-200 mb-4">
             GoldenBridge Care • Trusted GTA Home Care
           </p>
@@ -39,13 +40,27 @@ export default function Home() {
               We build person-centered care plans and carefully match each client with caregivers until the fit is right. Our goal is to provide confidence, continuity, and dignity in every visit.
             </p>
           </div>
-          <img src="/images/Elderly.jpg" alt="Support worker with client" className="w-full h-[380px] object-cover rounded-2xl" />
+          <Image
+            src="/images/Elderly.jpg"
+            alt="Support worker with client"
+            width={1200}
+            height={800}
+            sizes="(min-width: 1024px) 50vw, 100vw"
+            className="w-full h-[380px] object-cover rounded-2xl"
+          />
         </div>
       </section>
 
       <section className="py-16 bg-gray-50 border-b border-gray-200">
         <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
-          <img src="/images/nursing-care-costs-scaled-1-1024x682.jpg" alt="Nurse providing home support" className="w-full h-[380px] object-cover rounded-2xl order-2 md:order-1" />
+          <Image
+            src="/images/nursing-care-costs-scaled-1-1024x682.jpg"
+            alt="Nurse providing home support"
+            width={1200}
+            height={800}
+            sizes="(min-width: 1024px) 50vw, 100vw"
+            className="w-full h-[380px] object-cover rounded-2xl order-2 md:order-1"
+          />
           <div className="order-1 md:order-2">
             <p className="section-kicker mb-3">Consistent, Continuous Care</p>
             <h2 className="section-title mb-4">A Proactive Approach To Daily Health Support</h2>
@@ -132,7 +147,14 @@ export default function Home() {
 
           <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden mb-8">
             <div className="grid md:grid-cols-2 items-stretch">
-              <img src="/images/Elderly.jpg" alt="Senior and caregiver smiling" className="h-full w-full object-cover min-h-[280px]" />
+              <Image
+                src="/images/Elderly.jpg"
+                alt="Senior and caregiver smiling"
+                width={1200}
+                height={900}
+                sizes="(min-width: 768px) 50vw, 100vw"
+                className="h-full w-full object-cover min-h-[280px]"
+              />
               <div className="p-8 flex flex-col justify-center">
                 <p className="text-yellow-500 text-xl mb-3" aria-label="5 out of 5 stars">★★★★★</p>
                 <p className="text-gray-800 text-lg leading-relaxed mb-5">
@@ -173,9 +195,9 @@ export default function Home() {
 
           <div className="max-w-xl mx-auto rounded-xl border border-white/15 bg-white/5 px-5 py-4">
             <div className="grid sm:grid-cols-3 gap-4 items-center">
-              <img src="/images/wsib-logo.svg" alt="WSIB" className="h-9 w-auto mx-auto opacity-90" />
-              <img src="/images/schulich-logo.svg" alt="Schulich" className="h-9 w-auto mx-auto opacity-90" />
-              <img src="/images/zensurance-logo.svg" alt="Zensurance" className="h-9 w-auto mx-auto opacity-90" />
+              <Image src="/images/wsib-logo.svg" alt="WSIB" width={120} height={36} sizes="120px" className="h-9 w-auto mx-auto opacity-90" />
+              <Image src="/images/schulich-logo.svg" alt="Schulich" width={120} height={36} sizes="120px" className="h-9 w-auto mx-auto opacity-90" />
+              <Image src="/images/zensurance-logo.svg" alt="Zensurance" width={140} height={36} sizes="140px" className="h-9 w-auto mx-auto opacity-90" />
             </div>
           </div>
         </div>
