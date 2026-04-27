@@ -51,16 +51,8 @@ export function HeroVideoStrict({ src, className, startAt = 1.0 }: HeroVideoStri
       void tryPlay();
     };
 
-    const onTimeUpdate = () => {
-      if (!video.paused && video.currentTime >= getSafeStart() + 0.05) {
-        setIsReady(true);
-      }
-    };
-
     const onPlaying = () => {
-      if (video.currentTime >= getSafeStart()) {
-        setIsReady(true);
-      }
+      setIsReady(true);
     };
 
     const onVisibility = () => {
@@ -75,7 +67,6 @@ export function HeroVideoStrict({ src, className, startAt = 1.0 }: HeroVideoStri
 
     video.addEventListener("loadedmetadata", onLoadedMetadata);
     video.addEventListener("loadeddata", onLoadedData);
-    video.addEventListener("timeupdate", onTimeUpdate);
     video.addEventListener("playing", onPlaying);
     document.addEventListener("visibilitychange", onVisibility);
     window.addEventListener("pageshow", onUserGesture);
@@ -88,7 +79,6 @@ export function HeroVideoStrict({ src, className, startAt = 1.0 }: HeroVideoStri
     return () => {
       video.removeEventListener("loadedmetadata", onLoadedMetadata);
       video.removeEventListener("loadeddata", onLoadedData);
-      video.removeEventListener("timeupdate", onTimeUpdate);
       video.removeEventListener("playing", onPlaying);
       document.removeEventListener("visibilitychange", onVisibility);
       window.removeEventListener("pageshow", onUserGesture);
@@ -116,7 +106,7 @@ export function HeroVideoStrict({ src, className, startAt = 1.0 }: HeroVideoStri
 
       {/* Dark overlay sits ON TOP of the video and fades away once playback is confirmed */}
       <div
-        className={`absolute inset-0 bg-gray-900 transition-opacity duration-300 pointer-events-none ${isReady ? "opacity-0" : "opacity-100"}`}
+        className={`absolute inset-0 bg-gray-900 transition-opacity duration-150 pointer-events-none ${isReady ? "opacity-0" : "opacity-100"}`}
         style={{ zIndex: 1 }}
       />
 
