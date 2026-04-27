@@ -6,7 +6,7 @@ export default function Home() {
     <div className="pt-20 bg-white">
       <section className="relative min-h-[82vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <HeroVideoStrict src="/videos/hero.mp4?v=5" className="absolute inset-0" startAt={1.0} />
+          <HeroVideoStrict src="/videos/hero.mp4?v=6" className="absolute inset-0" />
           <div className="absolute inset-0 bg-black/45" style={{ zIndex: 2 }} />
         </div>
         <div className="relative max-w-6xl mx-auto px-6 py-20 text-white">
