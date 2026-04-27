@@ -71,7 +71,8 @@ export function HeroVideoStrict({ src, className }: { src: string; className?: s
       {/* No autoPlay — browser cannot start from frame 0 */}
       <video
         ref={videoRef}
-        className="absolute inset-0 h-full w-full object-cover"
+        className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-200 ${isReady ? "opacity-100" : "opacity-0"}`}
+        poster="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
         muted
         loop
         playsInline
