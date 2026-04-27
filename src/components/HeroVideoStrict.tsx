@@ -43,10 +43,16 @@ export function HeroVideoStrict({ src, className }: { src: string; className?: s
 
     // Recovery for mobile browsers that need a user gesture or become visible again
     const onGesture = () => {
-      if (video.paused) video.currentTime = 1.0;
+      if (video.paused) {
+        video.currentTime = 1.0;
+        video.play().catch(() => {});
+      }
     };
     const onVisibility = () => {
-      if (document.visibilityState === "visible" && video.paused) video.currentTime = 1.0;
+      if (document.visibilityState === "visible" && video.paused) {
+        video.currentTime = 1.0;
+        video.play().catch(() => {});
+      }
     };
 
     video.addEventListener("loadedmetadata", onLoadedMetadata);
@@ -73,6 +79,7 @@ export function HeroVideoStrict({ src, className }: { src: string; className?: s
         ref={videoRef}
         className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-200 ${isReady ? "opacity-100" : "opacity-0"}`}
         poster="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
+        style={{ visibility: isReady ? "visible" : "hidden" }}
         muted
         loop
         playsInline
